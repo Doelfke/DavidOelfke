@@ -1,0 +1,25 @@
+@import "../styles/breakpoints.scss";
+
+.title {
+    text-align: center;
+
+    span {
+        display: inline-block;
+        width: 90%
+    }
+
+    font-size: 30px;
+    font-weight: 600;
+
+    @include md {
+        font-size: 62px;
+    }
+
+    @include lg {
+        font-size: 80px;
+    }
+
+    @include xl {
+        font-size: 100px;
+    }
+}
