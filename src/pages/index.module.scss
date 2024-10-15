@@ -45,13 +45,14 @@
 }
 
 .tagLine {
-    margin-top: 8px;
+    margin-top: 12px;
 
     font-size: 16px;
     font-style: italic;
     color: #6b7280;
 
     @include md {
+        margin-top: 8px;
         font-size: 16px;
     }
 }
