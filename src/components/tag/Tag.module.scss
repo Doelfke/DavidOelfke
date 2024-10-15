@@ -1,0 +1,13 @@
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 4px;
+
+    color: #374151;
+    background-color: #e5e7eb;
+}

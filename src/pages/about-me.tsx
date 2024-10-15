@@ -1,18 +1,144 @@
 import { Page } from "@/components/page/Page";
+import { Tags } from "@/components/tag/Tags";
+
+import styles from "./about-me.module.scss";
+
+const TECH = [
+  "TypeScript",
+  "JavaScript",
+  "C#",
+  "Java",
+  "PHP",
+  "HTML",
+  "CSS",
+  "SCSS",
+  "LESS| React",
+  "Remix",
+  "Next.js",
+  "Angular",
+  "Vue",
+  "Nuxt",
+  "Knockout",
+  "jQuery",
+  "Cordova",
+  "Styled Components",
+  "Emotion",
+  "Material UI (MUI)",
+  "Tailwind",
+  "Node.js",
+  "Express.js",
+  "Nest.js",
+  "Prisma",
+  "TypeORM",
+  "WebAPI",
+  ".NET",
+  "AWS",
+  "Azure",
+  "GCP",
+  "Heroku",
+  "Fly.io API",
+  "Integration: REST",
+  "GraphQL",
+  "tRPC",
+  "MSGraph",
+  "Entity Framework",
+  "Postgres",
+  "MySQL",
+  "Redis",
+  "MongoDB",
+  "Supabase",
+  "Firebase",
+  "Docker",
+  "Kubernetes",
+  "CI/CD Pipelines",
+  "Feature Flag Systems",
+  "Monorepo",
+  "Slack Alerts",
+  "Git",
+  "GitHub",
+  "GitLab",
+  "Slack",
+  "Jira",
+  "Zod",
+  "Class Validator",
+  "Yup",
+  "Auth0",
+  "Cognito",
+  "Azure AD",
+  "LDAP",
+];
 
 export default function AboutMePage() {
   return (
     <Page title="About Me">
-      <div>header</div>
-      <div>content</div>
-
-      <div>header</div>
-      <div>content</div>
-
-      <div id="technologies">
-        TODO: here are some of the technologies I've worked with:
+      <div className={styles.sectionTitle}>I was born into tech.</div>
+      <div className={styles.sectionBody}>
+        My father worked at Digital Equipment Corporation (DEC) and being
+        somewhat-techy himself he taught me Basic when I was 5 years old. A few
+        years later he brought home our second PC with a blazing fast Pentium 1
+        133mz CPU.
+        <br />
+        <br />I was tasked with installing a sound card. When I was 13 I asked
+        him how are web pages made? And he showed me I could right click and see
+        the source myself. From there on out I was obsessed with the web.
       </div>
-      <div>TODO: linkedin link</div>
+
+      <div className={styles.sectionTitle}>And I started my career early.</div>
+      <div className={styles.sectionBody}>
+        I started working in IT when I was 15 and by 16 I took over all of the
+        responsibilities for the front end of a computer repair store, after
+        writing the playbook on how we "tuned up" most computer. I did this by
+        creating a special CD that had all of the latest tools we needed and
+        automating their installs and running them, with an easy UI. Matched up
+        with a paper checklist we were able to automate a ton of our work and
+        perform it much more quickly.
+        <br /> <br />I stayed for a few years until joining EMC (now Dell) to
+        manage multiple server server rooms. But it was there I switched over to
+        being (mostly) a software engineer.
+      </div>
+
+      <div className={styles.sectionTitle}>Then I found startups.</div>
+      <div className={styles.sectionBody}>
+        I found myself attracted to startups and had the privilege to work for
+        some of Boston's best. Builidum was the strongest startup in the city
+        for almost a decade. Their engineering team and culture were unrivaled
+        and I got to rise through the ranks from engineer all the way up to
+        director.
+        <br /> <br />
+        After leaving Buildium, I joined a brand new product Agency Rocket
+        Insights (now DEPT) and I grew the company 20x and expanded our presence
+        all the way to the west coast. I built over 15 products for (mostly)
+        other Boston startups and really embraced the Typescript, Node, and
+        React ecosystems.
+      </div>
+
+      <div className={styles.sectionTitle}>But the journey continues.</div>
+      <div className={styles.sectionBody}>
+        I joined Microsoft for a few years, but missed the startup world, so I
+        went back to it. Since I've been helping startups again build from 0 and
+        expand their practices, while setting the highest standards in code
+        quality and efficiency.
+        <br /> <br /> But I've also done a few other cool things. I wrote a book
+        on engineering under a pseudonym that was the number one best seller for
+        weeks. I also was lucky enough to go through Y Combinator (YC).
+        <br />
+        <br /> It's been a fun journey, but there's still a lot more to do!
+      </div>
+
+      <div className={styles.sectionTitle} id="technologies">
+        Here are some of the technologies I've worked with:
+      </div>
+      <div className={styles.sectionBody}>
+        <Tags tags={TECH}></Tags>
+      </div>
+
+      <div>
+        Feel free to reach out on{" "}
+        <a href="https://www.linkedin.com/in/DavidOelfke" target="__blank">
+          LinkedIn
+        </a>
+        !
+      </div>
     </Page>
   );
 }
