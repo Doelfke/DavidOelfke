@@ -1,7 +1,14 @@
-export default function RootLayout({
+import Navigation from "../navigation/Navigation";
+
+export default function Layout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return children;
+  return (
+    <div>
+      <Navigation />
+      {children}
+    </div>
+  );
 }

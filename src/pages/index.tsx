@@ -3,6 +3,7 @@
 import { TypeAnimation } from "react-type-animation";
 
 import styles from "./index.module.scss";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -45,7 +46,7 @@ export default function Home() {
       </div>
 
       <div className={styles.seeMyWork}>
-        <a href="/resume">See my work</a>
+        <Link href="/my-work">See my work</Link>
       </div>
     </>
   );
