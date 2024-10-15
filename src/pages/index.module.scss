@@ -61,15 +61,14 @@
 }
 
 .techStack {
-    margin-top: 32px;
-
+    margin-top: 32px;    
     @include md {
         margin-top: 64px;
     }
 }
 
 .techStackList {
-    margin-top: 8px;
+    margin: 4px 0;
     padding: 12px 8px;
     columns: 2;
     padding-inline-start: 38px;

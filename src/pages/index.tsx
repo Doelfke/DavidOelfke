@@ -26,12 +26,10 @@ export default function Home() {
           />
         </div>
         <div className={styles.subTitle}>from San Diego, California.</div>
-
         <div className={styles.tagLine}>
           I've worked for 2 people startups to tech giants and everything in
           between, specializing in all things web.
         </div>
-
         <div className={styles.techStack}>My favorite tech stack is:</div>
         <ul className={styles.techStackList}>
           <li>TypeScript</li>
@@ -43,6 +41,9 @@ export default function Home() {
           <li>Postgres</li>
           <li>Heroku</li>
         </ul>
+        <Link href="/about-me#technologies">
+          But I've worked with many more.
+        </Link>
       </div>
 
       <div className={styles.seeMyWork}>

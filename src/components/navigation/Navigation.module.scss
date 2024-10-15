@@ -61,6 +61,7 @@
     transition-property: transform;
     transition-duration: 0.15s;
     transition-timing-function: ease;
+    cursor: pointer;
   }
   
   .hamburgerInner::before,
@@ -114,8 +115,8 @@
 
 .navigationItems {
     position: fixed;
-    top: 0;
-    left: -100vw;
+    top: -100vh;
+    left: 0;
     z-index: 10;
     display: flex;
 
@@ -129,11 +130,12 @@
 
     background-color: #374151;
 
-    transition-duration: 0.13s;
+    transition-duration: 0.4s;
+    transition-timing-function: 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .navigationItemsOpen {
-   left: 0
+   top: 0
 }
 
 .navigationItem {
