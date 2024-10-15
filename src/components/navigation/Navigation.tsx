@@ -28,8 +28,14 @@ export default function Navigation() {
         <Link href="/" className={styles.navigationItem}>
           Home
         </Link>
+        <Link href="/about-me" className={styles.navigationItem}>
+          About Me
+        </Link>
         <Link href="/my-work" className={styles.navigationItem}>
           My Work
+        </Link>
+        <Link href="/blog" className={styles.navigationItem}>
+          Blog
         </Link>
       </div>
     </div>
