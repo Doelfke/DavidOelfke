@@ -13,7 +13,7 @@ export default function Home() {
             preRenderFirstString
             sequence={[
               250,
-              "I'm David Oelfke and I'm",
+              "I'm David Oelfke and I'm a",
               250,
               "I'm David Oelfke and I'm a web developer",
               250,
