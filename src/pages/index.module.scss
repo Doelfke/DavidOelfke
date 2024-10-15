@@ -19,7 +19,7 @@
         display: inline-block;
     }
 
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 600;
 
     @include md {
@@ -34,11 +34,12 @@
 }
 
 .subTitle {
-    margin-top: 8px;
+    margin-top: 4px;
 
     font-size: 18px;
 
     @include md {
+        margin-top: 8px;
         font-size: 36px;
     }
 }
