@@ -97,4 +97,23 @@
         bottom: 24px;
         font-size: 24px;
     }
+    animation: bounce 5s infinite alternate;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    94% {
+        transform: translateY(0);
+    }
+    96% {
+        transform: translateY(-10px);
+    }
+    98% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
 }
