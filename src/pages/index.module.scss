@@ -1,11 +1,22 @@
 @import "../styles/breakpoints.scss";
 
-.title {
-    text-align: center;
+.page {
+    padding: 8px;
 
+    @include md {
+        padding: 16px;
+    }
+    @include lg {
+        padding: 16px;
+    }
+    @include xl {
+        padding: 24px 96px;
+    }
+}
+
+.title {
     span {
         display: inline-block;
-        width: 90%
     }
 
     font-size: 26px;
@@ -14,12 +25,70 @@
     @include md {
         font-size: 62px;
     }
-
     @include lg {
         font-size: 80px;
     }
-
     @include xl {
         font-size: 100px;
+    }
+}
+
+.subTitle {
+    margin-top: 8px;
+
+    font-size: 18px;
+
+    @include md {
+        font-size: 36px;
+    }
+}
+
+.tagLine {
+    margin-top: 8px;
+
+    font-size: 16px;
+    font-style: italic;
+    color: #6b7280;
+
+    @include md {
+        font-size: 16px;
+    }
+}
+
+.techStack {
+    margin-top: 32px;
+
+    @include md {
+        margin-top: 64px;
+    }
+}
+
+.techStackList {
+    margin-top: 8px;
+    padding: 12px 8px;
+    columns: 2;
+    padding-inline-start: 32px;
+    font-size: 18px;
+    line-height: 30px;
+
+    background-color: #202e42;
+    color: #e5e7eb;
+
+    @include md {
+        columns: 4;
+        padding: 24px 16px;
+        line-height: 36px;
+        padding-inline-start: 42px;
+    }
+
+    border-radius: 8px;
+}
+
+.seeMyWork {
+    margin-top: 32px;
+    font-size: 18px;
+
+    @include md {
+        margin-top: 64px;
     }
 }

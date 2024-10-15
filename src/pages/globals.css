@@ -2,3 +2,13 @@ body {
   font-family: "Figtree";
   color: rgb(55, 65, 81)
 }
+
+a {
+  font-weight: 800;
+  color: #9333ea;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
