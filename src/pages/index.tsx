@@ -34,8 +34,9 @@ export default function Home() {
         <div className={styles.techStack}>My favorite tech stack is:</div>
         <ul className={styles.techStackList}>
           <li>TypeScript</li>
-          <li>Node.js</li>
           <li>React</li>
+          <li>Custom Components</li>
+          <li>Node.js</li>
           <li>NestJS</li>
           <li>TypeORM</li>
           <li>Postgres</li>
