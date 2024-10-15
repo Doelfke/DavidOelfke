@@ -143,6 +143,14 @@ export default function AboutMePage() {
         being (mostly) a software engineer.
       </div>
 
+      <div className={styles.sectionTitle}>School was weird.</div>
+      <div className={styles.sectionBody}>
+        Highschool was great, I learned PHP and took classes in VB, C++, Cisco,
+        and A+. But college wasn't for me. I had a free ride to any state school
+        in Massachusetts, but I think the last straw for me was when my Java
+        teacher didn't know what a .jar file was.
+      </div>
+
       <div className={styles.sectionTitle}>Then I found startups.</div>
       <div className={styles.sectionBody}>
         I found myself attracted to startups and had the privilege to work for
@@ -170,7 +178,10 @@ export default function AboutMePage() {
         weeks. I also was lucky enough to go through Y Combinator (YC).
         <br />
         <br />
-        It's been a fun journey, but there's still a lot more to do!
+        It's been a fun journey. I've got work and learn in a ton of industries
+        from property tech, agricultural tech, meal delivery, exercise
+        equipment, cloud, risk, payroll, accounting... you get the point. But
+        there's still a lot more to do!
       </div>
 
       <div className={styles.sectionTitle} id="technologies">
