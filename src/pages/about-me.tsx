@@ -4,68 +4,110 @@ import { Tags } from "@/components/tag/Tags";
 import styles from "./about-me.module.scss";
 
 const TECH = [
-  "TypeScript",
-  "JavaScript",
-  "C#",
-  "Java",
-  "PHP",
-  "HTML",
-  "CSS",
-  "SCSS",
-  "LESS| React",
-  "Remix",
-  "Next.js",
-  "Angular",
-  "Vue",
-  "Nuxt",
-  "Knockout",
-  "jQuery",
-  "Cordova",
-  "Styled Components",
-  "Emotion",
-  "Material UI (MUI)",
-  "Tailwind",
-  "Node.js",
-  "Express.js",
-  "Nest.js",
-  "Prisma",
-  "TypeORM",
-  "WebAPI",
   ".NET",
+  "Ant Design (AntD)",
   "AWS",
+  "Akamai",
+  "Amplitude",
+  "Angular",
+  "Apollo",
+  "Auth0",
   "Azure",
-  "GCP",
-  "Heroku",
-  "Fly.io API",
-  "Integration: REST",
-  "GraphQL",
-  "tRPC",
-  "MSGraph",
-  "Entity Framework",
-  "Postgres",
-  "MySQL",
-  "Redis",
-  "MongoDB",
-  "Supabase",
-  "Firebase",
+  "Azure AD",
+  "Backblaze",
+  "Bash",
+  "Bitbucket",
+  "Bootstrap",
+  "C#",
+  "CSS",
+  "Class Validator",
+  "CloudFront",
+  "Cloudflare",
+  "CloudWatch",
+  "Cognito",
+  "Cordova",
+  "Datadog",
+  "Dataloader",
   "Docker",
-  "Kubernetes",
-  "CI/CD Pipelines",
-  "Feature Flag Systems",
-  "Monorepo",
-  "Slack Alerts",
+  "Elastic Bean Stalk (ELB)",
+  "Elasticsearch",
+  "ESLint",
+  "Emotion",
+  "Entity Framework",
+  "Express.js",
+  "Firebase",
+  "Fly.io",
+  "GCP",
   "Git",
   "GitHub",
   "GitLab",
-  "Slack",
+  "Google Analytics",
+  "Grafana",
+  "GraphQL",
+  "HTML",
+  "Heroku",
+  "Jade",
+  "Java",
+  "JavaScript",
+  "Jest",
   "Jira",
-  "Zod",
-  "Class Validator",
-  "Yup",
-  "Auth0",
-  "Cognito",
-  "Azure AD",
+  "jQuery",
+  "Knockout",
+  "Kubernetes",
   "LDAP",
+  "LESS",
+  "Lambdas",
+  "Launch Darkly",
+  "Linq",
+  "Logz.io",
+  "Lucene",
+  "MSGraph",
+  "Mantine",
+  "Material UI (MUI)",
+  "MixPanel",
+  "Mocha",
+  "MongoDB",
+  "Mongoose",
+  "Monorepo",
+  "MSBuild",
+  "MySQL",
+  "Nest.js",
+  "Netlify",
+  "New Relic",
+  "Next.js",
+  "Node.js",
+  "Nuxt",
+  "Open AI",
+  "Oracle DB",
+  "PHP",
+  "Postgres",
+  "Powershell",
+  "Prisma",
+  "Pug",
+  "REST",
+  "React",
+  "Redis",
+  "Remix",
+  "S3",
+  "SCSS",
+  "Segment",
+  "Slack",
+  "Styled Components",
+  "Supabase",
+  "Tailwind",
+  "tRPC",
+  "TypeORM",
+  "TypeScript",
+  "Vercel",
+  "Visual Basic",
+  "Vite",
+  "Vitest",
+  "Vue",
+  "WebAPI",
+  "Webpack",
+  "WordPress",
+  "Yup",
+  "Zod",
 ];
 
 export default function AboutMePage() {
@@ -76,14 +118,18 @@ export default function AboutMePage() {
         My father worked at Digital Equipment Corporation (DEC) and being
         somewhat-techy himself he taught me Basic when I was 5 years old. A few
         years later he brought home our second PC with a blazing fast Pentium 1
-        133mz CPU.
+        133mz CPU. I was tasked with installing a sound card.
         <br />
-        <br />I was tasked with installing a sound card. When I was 13 I asked
-        him how are web pages made? And he showed me I could right click and see
-        the source myself. From there on out I was obsessed with the web.
+        <br />
+        I may have got caught hacking a few times...
+        <br />
+        <br />
+        When I was 13 I asked him how are web pages made? And he showed me I
+        could right click and see the source myself. From there on out I was
+        obsessed with the web.
       </div>
 
-      <div className={styles.sectionTitle}>And I started my career early.</div>
+      <div className={styles.sectionTitle}>I started my career early too.</div>
       <div className={styles.sectionBody}>
         I started working in IT when I was 15 and by 16 I took over all of the
         responsibilities for the front end of a computer repair store, after
@@ -118,15 +164,17 @@ export default function AboutMePage() {
         went back to it. Since I've been helping startups again build from 0 and
         expand their practices, while setting the highest standards in code
         quality and efficiency.
-        <br /> <br /> But I've also done a few other cool things. I wrote a book
-        on engineering under a pseudonym that was the number one best seller for
+        <br /> <br />
+        But I've also done a few other cool things since. I wrote a book on
+        engineering under a pseudonym that was the number one best seller for
         weeks. I also was lucky enough to go through Y Combinator (YC).
         <br />
-        <br /> It's been a fun journey, but there's still a lot more to do!
+        <br />
+        It's been a fun journey, but there's still a lot more to do!
       </div>
 
       <div className={styles.sectionTitle} id="technologies">
-        Here are some of the technologies I've worked with:
+        Here are some of the technologies I've worked with 😅:
       </div>
       <div className={styles.sectionBody}>
         <Tags tags={TECH}></Tags>

@@ -8,7 +8,7 @@ interface Props {
 export const Tags: React.FC<Props> = (props: Props) => {
   return (
     <div className={styles.tags}>
-      {props.tags.sort().map((tag) => {
+      {props.tags.map((tag) => {
         return <Tag tag={tag} key={tag} />;
       })}
     </div>
