@@ -7,9 +7,11 @@ interface Props extends React.PropsWithChildren {
 
 export const Page: React.FC<Props> = (props: Props) => {
   return (
-    <div className={styles.page}>
-      <PageTitle title={props.title} />
-      {props.children}
+    <div>
+      <div className={styles.page}>
+        <PageTitle title={props.title} />
+        {props.children}
+      </div>
     </div>
   );
 };

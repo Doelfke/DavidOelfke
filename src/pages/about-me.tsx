@@ -113,6 +113,8 @@ const TECH = [
 export default function AboutMePage() {
   return (
     <Page title="About Me">
+      <title>David Oelfke - About Me</title>
+
       <div className={styles.sectionTitle}>I was born into tech.</div>
       <div className={styles.sectionBody}>
         My father worked at Digital Equipment Corporation (DEC) and being
