@@ -87,10 +87,13 @@
 }
 
 .seeMyWork {
-    margin-top: 32px;
-    font-size: 18px;
+    position: fixed;
+    bottom: 8px;
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
 
     @include md {
-        margin-top: 64px;
+        bottom: 24px;
     }
 }
