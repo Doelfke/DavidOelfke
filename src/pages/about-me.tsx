@@ -1,131 +1,8 @@
 import { Page } from "@/components/page/Page";
 import { Tags } from "@/components/tag/Tags";
+import { TECH } from "@/data/tech";
 
 import styles from "./about-me.module.scss";
-
-const TECH = [
-  ".NET",
-  "Ant Design (AntD)",
-  "AWS",
-  "Akamai",
-  "Amplitude",
-  "Angular",
-  "Apollo",
-  "Auth0",
-  "Azure",
-  "Azure AD",
-  "Backblaze",
-  "Bash",
-  "Bitbucket",
-  "Bootstrap",
-  "Brightcove",
-  "C#",
-  "CSS",
-  "Class Validator",
-  "CloudFront",
-  "Cloudflare",
-  "CloudWatch",
-  "Cognito",
-  "Contentful",
-  "Cordova",
-  "Datadog",
-  "Dataloader",
-  "Day.js",
-  "Docker",
-  "Elastic Bean Stalk (ELB)",
-  "Elasticsearch",
-  "ESLint",
-  "Emotion",
-  "Entity Framework",
-  "Express.js",
-  "Firebase",
-  "Fly.io",
-  "GCP",
-  "Git",
-  "GitHub",
-  "GitLab",
-  "Google Analytics",
-  "Grafana",
-  "GraphQL",
-  "HTML",
-  "Heroku",
-  "Jade",
-  "Java",
-  "JavaScript",
-  "Jest",
-  "Jira",
-  "jQuery",
-  "Knockout",
-  "Kubernetes",
-  "LDAP",
-  "LESS",
-  "Lambdas",
-  "Launch Darkly",
-  "Lerna",
-  "Linq",
-  "Lodash",
-  "Logz.io",
-  "Lucene",
-  "Mailgun",
-  "Mantine",
-  "Material UI (MUI)",
-  "MixPanel",
-  "Mocha",
-  "Moment",
-  "MongoDB",
-  "Mongoose",
-  "Monorepo",
-  "MSBuild",
-  "MSGraph",
-  "MySQL",
-  "Nest.js",
-  "Netlify",
-  "New Relic",
-  "Next.js",
-  "Node.js",
-  "NPM",
-  "Nuxt",
-  "Open AI",
-  "Oracle DB",
-  "PHP",
-  "PNPM",
-  "Postgres",
-  "Powershell",
-  "Prisma",
-  "Pug",
-  "REST",
-  "React",
-  "React Hook Form",
-  "React Query",
-  "Redis",
-  "Remix",
-  "S3",
-  "SCSS",
-  "Segment",
-  "SendGrid",
-  "SES",
-  "Slack",
-  "Styled Components",
-  "Supabase",
-  "Swagger",
-  "Tailwind",
-  "tRPC",
-  "Turborepo",
-  "TypeORM",
-  "TypeScript",
-  "Underscore",
-  "Vercel",
-  "Visual Basic",
-  "Vite",
-  "Vitest",
-  "Vue",
-  "WebAPI",
-  "Webpack",
-  "WordPress",
-  "Yarn",
-  "Yup",
-  "Zod",
-];
 
 export default function AboutMePage() {
   return (
@@ -140,12 +17,15 @@ export default function AboutMePage() {
         133mz CPU. I was tasked with installing a sound card.
         <br />
         <br />
-        I may have got caught hacking a few times...
-        <br />
-        <br />
         When I was 13 I asked him how are web pages made? And he showed me I
         could right click and see the source myself. From there on out I was
         obsessed with the web.
+        <br />
+        <br />
+        He may have got caught hacking a few times... He didn't catch me doing
+        the real bad things though. I used to make trojans in VB and mess with
+        peoples' computers and steal their AIM accounts. I'm glad it was
+        pre-patriot act!
       </div>
 
       <div className={styles.sectionTitle}>I started my career early too.</div>
@@ -201,6 +81,11 @@ export default function AboutMePage() {
         industries from property tech, agricultural tech, meal delivery,
         exercise equipment, cloud, risk, payroll, accounting... you get the
         point. But there's still a lot more to do!
+        <br />
+        <br />
+        And still keep up with the latest hardware and have my own home lab that
+        hosts my fault tolerant private DNS on a Docker Compose cluster, 2 solid
+        state NASes, among some other things.
       </div>
 
       <div className={styles.sectionTitle} id="technologies">
