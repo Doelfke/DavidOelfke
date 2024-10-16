@@ -18,7 +18,6 @@ export default function Navigation() {
           <span className={styles.hamburgerInner}></span>
         </span>
       </button>
-
       <div
         className={`${styles.navigationItems} ${
           isOpen ? styles.navigationItemsOpen : ""
