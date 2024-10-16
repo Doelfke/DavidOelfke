@@ -2,6 +2,11 @@
 
 .container {
     padding-bottom: 32px;
+    line-height: 24px;
+
+    li {
+        margin-bottom: 16px;
+    }
 }
 
 .container + .container {
@@ -26,4 +31,29 @@
     @include md {
         font-size: 14px;
     }
+}
+
+
+.images, .domains {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.images {
+    margin-top: 16px;
+}
+
+.domain, .imageLink {
+    @include md {
+        display: inline-block;
+    }
+}
+
+.divider {
+    display: inline-block;
+    border-left: 1px solid #9e9c9c;
+    height: 10px;
+    width: 2px;
+    margin: 0 8px;
 }

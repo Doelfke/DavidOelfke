@@ -24,6 +24,38 @@ export default function MyWorkPage() {
                 return <li key={i}>{accomplishment}</li>;
               })}
             </ul>
+            {!!job.domains.length && (
+              <div className={styles.domains}>
+                {job.domains.map((domain, i) => {
+                  return (
+                    <div key={domain} className={styles.domain}>
+                      <a href={`https://${domain}`} target="__blank">
+                        {domain}
+                      </a>
+                      {i !== job.domains.length - 1 && (
+                        <div className={styles.divider} />
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+            {!!job.images.length && (
+              <div className={styles.images}>
+                {job.images.map((image, i) => {
+                  return (
+                    <div key={image} className={styles.imageLink}>
+                      <a href={`/images/${image}`} target="__blank">
+                        Image {i + 1}
+                      </a>
+                      {i !== job.images.length - 1 && (
+                        <div className={styles.divider} />
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            )}
           </div>
         );
       })}

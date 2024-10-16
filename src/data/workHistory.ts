@@ -4,6 +4,8 @@ interface Work {
   startDate: string;
   endDate: string;
   accomplishments: string[];
+  domains: string[];
+  images: string[];
 }
 
 const sayari = {
@@ -22,6 +24,16 @@ const sayari = {
     "Built better tooling to support faster development: auto-recovering kubernetes port forwarding and storybook to custom theme CSS Chrome extension.",
     "Created front end practice meeting to keep devs in sync about changes / vote on changes.",
   ],
+  images: [
+    "Sayari1.png",
+    "Sayari2.png",
+    "Sayari3.png",
+    "Sayari4.png",
+    "Sayari5.png",
+    "Sayari6.png",
+    "Sayari7.png",
+  ],
+  domains: ["Sayari.com"],
 };
 
 const freelance = {
@@ -35,6 +47,20 @@ const freelance = {
     "Sibble & Associates - viability reports for startups to help them raise funds.",
     "Trayd - same day payroll for construction workers.",
     "Upwell - invoicing automation for trucking / logistics.",
+  ],
+  images: [
+    "Onbrand1.png",
+    "Onbrand2.png",
+    "Trayd1.png",
+    "Trayd2.png",
+    "Upwell1.jpg",
+    "Upwell2.jpg",
+  ],
+  domains: [
+    "OnbrandPLM.com",
+    "BuildTrayd.com",
+    "SibbleAssociates.com",
+    "Upwell.com",
   ],
 };
 
@@ -50,6 +76,8 @@ const microsoft = {
     "Restructured all teams to be full-stack within the organization.",
     "Evaluated new hardware for developers in the organization.",
   ],
+  images: ["Microsoft1.png", "Microsoft2.png"],
+  domains: ["Portal.Azure.com"],
 };
 
 const rocket = {
@@ -64,6 +92,8 @@ const rocket = {
     "Expanded the company to the west coast.",
     "Created a framework that's used at multiple clients and helped many of them build or scale their engineering practices.",
   ],
+  images: [],
+  domains: [],
 };
 
 const buildium = {
@@ -79,6 +109,8 @@ const buildium = {
     "Built out the devops team and practices.",
     "Led the organization for most security bounties.",
   ],
+  images: [],
+  domains: [],
 };
 
 const rls = {
@@ -91,6 +123,8 @@ const rls = {
     "Migrated servers to a scalable architecture with full redundancy and high availability.",
     "Modernized IT and development practices.",
   ],
+  images: [],
+  domains: [],
 };
 
 const tsd = {
@@ -107,6 +141,8 @@ const tsd = {
     "Improved engineering practices and company culture.",
     "Oversaw public website development.",
   ],
+  images: [],
+  domains: [],
 };
 
 const emc = {
@@ -117,6 +153,8 @@ const emc = {
   accomplishments: [
     "Ownership, development, and administration of various 1st and 3rd party webs apps and tools.",
   ],
+  images: [],
+  domains: [],
 };
 
 const cdu = {
@@ -129,6 +167,8 @@ const cdu = {
     "Oversaw other technicians.",
     "Created / optimized processes to increase profitability, productivity, and quality.",
   ],
+  images: [],
+  domains: [],
 };
 
 export const WORK_HISTORY: Work[] = [
