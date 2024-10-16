@@ -93,7 +93,7 @@ const rocket = {
     "Created a framework that's used at multiple clients and helped many of them build or scale their engineering practices.",
   ],
   images: [],
-  domains: [],
+  domains: ["RocketInsights.com", "DeptAgency.com"],
 };
 
 const buildium = {
@@ -110,7 +110,7 @@ const buildium = {
     "Led the organization for most security bounties.",
   ],
   images: [],
-  domains: [],
+  domains: ["Buildium.com"],
 };
 
 const rls = {
@@ -124,7 +124,7 @@ const rls = {
     "Modernized IT and development practices.",
   ],
   images: [],
-  domains: [],
+  domains: ["TryElevate.com"],
 };
 
 const tsd = {
@@ -142,7 +142,7 @@ const tsd = {
     "Oversaw public website development.",
   ],
   images: [],
-  domains: [],
+  domains: ["TSDWeb.com"],
 };
 
 const emc = {
@@ -154,7 +154,7 @@ const emc = {
     "Ownership, development, and administration of various 1st and 3rd party webs apps and tools.",
   ],
   images: [],
-  domains: [],
+  domains: ["Dell.com"],
 };
 
 const cdu = {

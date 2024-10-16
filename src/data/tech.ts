@@ -94,6 +94,7 @@ export const TECH = [
   "React Query",
   "Redis",
   "Remix",
+  "RxJS",
   "S3",
   "SCSS",
   "Segment",
