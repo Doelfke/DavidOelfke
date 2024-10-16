@@ -30,6 +30,7 @@ const TECH = [
   "Cordova",
   "Datadog",
   "Dataloader",
+  "Day.js",
   "Docker",
   "Elastic Bean Stalk (ELB)",
   "Elasticsearch",
@@ -62,6 +63,7 @@ const TECH = [
   "Launch Darkly",
   "Lerna",
   "Linq",
+  "Lodash",
   "Logz.io",
   "Lucene",
   "Mailgun",
@@ -69,6 +71,7 @@ const TECH = [
   "Material UI (MUI)",
   "MixPanel",
   "Mocha",
+  "Moment",
   "MongoDB",
   "Mongoose",
   "Monorepo",
@@ -92,6 +95,8 @@ const TECH = [
   "Pug",
   "REST",
   "React",
+  "React Hook Form",
+  "React Query",
   "Redis",
   "Remix",
   "S3",
@@ -108,6 +113,7 @@ const TECH = [
   "Turborepo",
   "TypeORM",
   "TypeScript",
+  "Underscore",
   "Vercel",
   "Visual Basic",
   "Vite",
@@ -146,11 +152,11 @@ export default function AboutMePage() {
       <div className={styles.sectionBody}>
         I started working in IT when I was 15 and by 16 I took over all of the
         responsibilities for the front end of a computer repair store, after
-        writing the playbook on how we "tuned up" most computer. I did this by
-        creating a special CD that had all of the latest tools we needed and
-        automating their installs and running them, with an easy UI. Matched up
-        with a paper checklist we were able to automate a ton of our work and
-        perform it much more quickly.
+        writing the playbook on how we "tuned up" PCs. I did this by creating a
+        special CD that had all of the latest tools we needed and automating
+        their installs and running them, with an easy UI. Matched up with a
+        paper checklist we were able to automate a ton of our work and perform
+        it much more quickly.
         <br /> <br />I stayed for a few years until joining EMC (now Dell) to
         manage multiple server server rooms. But it was there I switched over to
         being (mostly) a software engineer.
@@ -191,10 +197,10 @@ export default function AboutMePage() {
         weeks. I also was lucky enough to go through Y Combinator (YC).
         <br />
         <br />
-        It's been a fun journey. I've got work and learn in a ton of industries
-        from property tech, agricultural tech, meal delivery, exercise
-        equipment, cloud, risk, payroll, accounting... you get the point. But
-        there's still a lot more to do!
+        It's been a fun journey. I've got to work and learn in a ton of
+        industries from property tech, agricultural tech, meal delivery,
+        exercise equipment, cloud, risk, payroll, accounting... you get the
+        point. But there's still a lot more to do!
       </div>
 
       <div className={styles.sectionTitle} id="technologies">
