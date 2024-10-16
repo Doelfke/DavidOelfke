@@ -47,6 +47,7 @@ export const TECH = [
   "Jade",
   "Java",
   "JavaScript",
+  "Jeckyll",
   "Jest",
   "Jira",
   "jQuery",
