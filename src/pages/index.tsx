@@ -28,7 +28,7 @@ export default function Home() {
         </div>
         <div className={styles.subTitle}>from San Diego, California.</div>
         <div className={styles.tagLine}>
-          I've worked for 2 people startups to tech giants and everything in
+          I've worked for 2 people startups, tech giants, and everything in
           between, specializing in all things web.
         </div>
         <div className={styles.techStack}>My favorite tech stack is:</div>
