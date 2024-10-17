@@ -1,0 +1,31 @@
+.post + .post  {
+    margin-top: 64px;
+}
+
+.title {
+    margin-bottom: 4px;
+}
+
+.title > a {
+    font-size: 24px;
+    font-weight: 400;
+    color: #374151;
+    text-decoration: none;
+}
+
+.date {
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #374151ad;
+}
+
+.subTitle {
+    color: #6b7280;
+}
+
+.readIt {
+    margin-top: 16px;
+    a {
+        font-weight: 200;
+    }
+}

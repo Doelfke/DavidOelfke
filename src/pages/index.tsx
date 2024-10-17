@@ -8,7 +8,6 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <title>David Oelfke - Home</title>
       <div className={styles.page}>
         <div className={styles.title}>
           <TypeAnimation

@@ -6,8 +6,6 @@ import styles from "./my-work.module.scss";
 export default function MyWorkPage() {
   return (
     <Page title="My Work">
-      <title>David Oelfke - My Work</title>
-
       {WORK_HISTORY.map((job) => {
         return (
           <div className={styles.container} key={job.companyName}>
