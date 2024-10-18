@@ -7,11 +7,13 @@ interface Props extends React.PropsWithChildren {
 }
 
 export const Page: React.FC<Props> = (props: Props) => {
+  const pageTitle = `David Oelfke - ${props.title}`;
+
   return (
     <div className={styles.page}>
       <PageTitle title={props.title} />
       <Head>
-        <title>David Oelfke - {props.title}</title>
+        <title>{pageTitle}</title>
       </Head>
       {props.children}
     </div>

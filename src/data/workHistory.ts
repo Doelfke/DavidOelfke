@@ -82,12 +82,11 @@ const microsoft = {
 
 const rocket = {
   companyName: "Rocket Insights",
-  position: "Director of Engineering",
+  position: "Hands on Director of Engineering",
   startDate: "Nov 2017",
   endDate: "May 2021",
   accomplishments: [
-    "Oversaw 60+ engineers.",
-    "Led and launched over 15 product across many industries.",
+    "Led, built, and  launched over 15 product across many industries.",
     "Hired the second generation of engineers.",
     "Expanded the company to the west coast.",
     "Created a framework that's used at multiple clients and helped many of them build or scale their engineering practices.",
@@ -98,10 +97,11 @@ const rocket = {
 
 const buildium = {
   companyName: "Buildium",
-  position: "Director of Engineering",
+  position: "Hands on Director of Engineering",
   startDate: "Dec 2013",
   endDate: "Nov 2017",
   accomplishments: [
+    "Lead engineer for the accounting platform.",
     "Managed and led multiple teams.",
     "Increased predictability across teams.",
     "Completely revamped front-end practices.",
