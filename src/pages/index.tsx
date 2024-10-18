@@ -18,6 +18,8 @@ export default function Home() {
               250,
               "I'm David Oelfke and I'm a web developer",
               250,
+              "I'm David Oelfke and I'm an engineering author",
+              250,
               "I'm David Oelfke and I'm an engineering leader",
               250,
               "I'm David Oelfke and I'm a software engineer",

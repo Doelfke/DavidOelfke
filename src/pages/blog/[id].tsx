@@ -5,6 +5,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { dateUtils } from "@/utils/dateUtils";
 
 import styles from "./blogpost.module.scss";
+import Head from "next/head";
 
 interface Props {
   post: BlogPost;
@@ -26,14 +27,22 @@ export const getServerSideProps = async (context: {
 };
 
 const BlogPage: React.FC<Props> = (props: Props) => {
-  return (
-    <Page title={props.post.fields.title}>
-      <div className={styles.subTitle}>{props.post.fields.subtitle}</div>
-      <div className={styles.date}>
-        {dateUtils.format(props.post.sys.createdAt)}
-      </div>
+  const pageTitle = `David Oelfke - ${props.post.fields.title}`;
 
-      {documentToReactComponents(props.post.fields.body)}
+  return (
+    <Page title="Blog">
+      <Head>
+        <title>{pageTitle}</title>
+      </Head>
+      <div className={styles.post}>
+        <h2 className={styles.title}>{props.post.fields.title}</h2>
+        <div className={styles.subTitle}>{props.post.fields.subtitle}</div>
+        <div className={styles.date}>
+          {dateUtils.format(props.post.sys.createdAt)}
+        </div>
+
+        {documentToReactComponents(props.post.fields.body)}
+      </div>
     </Page>
   );
 };
