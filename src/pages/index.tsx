@@ -4,10 +4,14 @@ import { TypeAnimation } from "react-type-animation";
 
 import styles from "./index.module.scss";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>DavidOelfke.dev - Home</title>
+      </Head>
       <div className={styles.page}>
         <div className={styles.title}>
           <TypeAnimation

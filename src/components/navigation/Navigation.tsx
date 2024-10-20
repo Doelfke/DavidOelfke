@@ -12,6 +12,7 @@ export default function Navigation() {
           isOpen ? styles.isOpen : undefined
         }`}
         type="button"
+        aria-label="Toggle navigation menu"
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className={styles.hamburgerBox}>

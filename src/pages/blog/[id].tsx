@@ -3,9 +3,9 @@ import * as contentful from "contentful";
 import BlogPost from "@/types/blogPost";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { dateUtils } from "@/utils/dateUtils";
-
-import styles from "./blogpost.module.scss";
 import Head from "next/head";
+
+import styles from "./[id].module.scss";
 
 interface Props {
   post: BlogPost;
@@ -27,7 +27,7 @@ export const getServerSideProps = async (context: {
 };
 
 const BlogPage: React.FC<Props> = (props: Props) => {
-  const pageTitle = `David Oelfke - ${props.post.fields.title}`;
+  const pageTitle = `DavidOelfke.dev - ${props.post.fields.title}`;
 
   return (
     <Page title="Blog">

@@ -100,8 +100,8 @@ export default function AboutMePage() {
         Feel free to reach out on{" "}
         <a href="https://www.linkedin.com/in/DavidOelfke" target="__blank">
           LinkedIn
-        </a>
-        !
+        </a>{" "}
+        or follow me on <a href="https://github.com/Doelfke">Github</a>!
       </div>
     </Page>
   );
