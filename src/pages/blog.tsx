@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from "./blog.module.scss";
 import { dateUtils } from "@/utils/dateUtils";
 import BlogPost from "@/types/blogPost";
+import { blogUtils } from "@/utils/blogUtils";
 
 interface BlogPosts {
   total: number;
@@ -32,9 +33,7 @@ const BlogPage: React.FC<Props> = (props: Props) => {
   return (
     <Page title="Blog">
       {props.posts.items.map((post) => {
-        const postLink = `/blog/${post.fields.title
-          .toLowerCase()
-          .replaceAll(" ", "-")}-${post.sys.id}`;
+        const postLink = blogUtils.generateUrl(post.sys.id, post.fields.title);
 
         return (
           <div key={post.sys.id} className={styles.post}>

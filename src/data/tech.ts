@@ -102,6 +102,7 @@ export const TECH = [
   "SendGrid",
   "SES",
   "Slack",
+  "SQS",
   "Styled Components",
   "Supabase",
   "Swagger",

@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 const jsonfeedToRSS = require("jsonfeed-to-rss");
 import * as contentful from "contentful";
 import BlogPost from "@/types/blogPost";
+import { blogUtils } from "@/utils/blogUtils";
 
 interface BlogPosts {
   total: number;
@@ -33,13 +34,13 @@ export default async function handler(
       url: "https://davidoelfke.dev",
     },
     items: posts.items.map((post) => {
+      const postLink = blogUtils.generateUrl(post.sys.id, post.fields.title);
+
       return {
         id: post.sys.id,
         title: post.fields.title,
         date_published: post.sys.createdAt,
-        url: `https://davidoelfke.dev/blog/${post.fields.title
-          .toLowerCase()
-          .replaceAll(" ", "-")}-${post.sys.id}`,
+        url: "https://davidoelfke.dev" + postLink,
       };
     }),
   };
