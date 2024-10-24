@@ -1,31 +1,21 @@
 import { Page } from "@/components/page/Page";
-import * as contentful from "contentful";
 import Link from "next/link";
 import styles from "./blog.module.scss";
 import { dateUtils } from "@/utils/dateUtils";
-import BlogPost from "@/types/blogPost";
 import { blogUtils } from "@/utils/blogUtils";
-
-interface BlogPosts {
-  total: number;
-  limit: number;
-  skip: number;
-
-  items: BlogPost[];
-}
+import { BlogPosts } from "./api/blog/posts";
 
 interface Props {
   posts: BlogPosts;
 }
 
 export const getServerSideProps = async () => {
-  const client = contentful.createClient({
-    space: process.env.CONTENTFUL_SPACE as string,
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,
+  const req = await fetch(`${process.env.API_BASE_URL}/blog/posts`, {
+    next: {
+      tags: ["blog-posts"],
+    },
   });
-
-  const posts = (await client.getEntries()) as unknown as BlogPosts;
-
+  const posts = await req.json();
   return { props: { posts } };
 };
 
