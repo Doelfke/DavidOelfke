@@ -15,16 +15,16 @@ function generateSiteMap(urls: string[]) {
   return `<?xml version="1.0" encoding="UTF-8"?>
      <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
        <url>
-         <loc>https://davidoelfke.com</loc>
+         <loc>https://davidoelfke.dev</loc>
        </url>
        <url>
-         <loc>https://davidoelfke.com/about-me</loc>
+         <loc>https://davidoelfke.dev/about-me</loc>
        </url>
        <url>
-         <loc>https://davidoelfke.com/blog</loc>
+         <loc>https://davidoelfke.dev/blog</loc>
        </url>
        <url>
-         <loc>https://davidoelfke.com/my-work</loc>
+         <loc>https://davidoelfke.dev/my-work</loc>
        </url>
        ${urls
          .map((url) => {
