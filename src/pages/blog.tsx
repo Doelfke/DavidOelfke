@@ -29,7 +29,7 @@ export const getServerSideProps = async () => {
   const cachedPosts = await redis.get<BlogPosts>("posts");
 
   if (cachedPosts) {
-    return { props: { posts: cachedPosts } };
+    return { props: { cachedPosts } };
   }
 
   const posts = (await client.getEntries()) as unknown as BlogPosts;
