@@ -52,7 +52,7 @@ export async function getServerSideProps(r: {
 
   const pages = result.items.map((post) => {
     return (
-      "https://davidoelfke.dev/" +
+      "https://davidoelfke.dev" +
       blogUtils.generateUrl(post.sys.id, post.fields.title)
     );
   });
