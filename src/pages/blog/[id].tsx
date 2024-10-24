@@ -1,4 +1,5 @@
 import { Page } from "@/components/page/Page";
+import * as contentful from "contentful";
 import BlogPost from "@/types/blogPost";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { dateUtils } from "@/utils/dateUtils";
@@ -13,14 +14,14 @@ interface Props {
 export const getServerSideProps = async (context: {
   params: { id: string };
 }) => {
-  const id = context.params.id.split("-").pop();
-
-  const req = await fetch(`${process.env.API_BASE_URL}/blog/posts/${id}`, {
-    next: {
-      tags: [`blog-posts/${id}`],
-    },
+  const client = contentful.createClient({
+    space: process.env.CONTENTFUL_SPACE as string,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,
   });
-  const post = await req.json();
+
+  const post = (await client.getEntry(
+    context.params.id.split("-").pop() as string
+  )) as unknown as BlogPost;
 
   return { props: { post } };
 };
