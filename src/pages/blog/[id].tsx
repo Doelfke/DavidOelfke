@@ -6,14 +6,40 @@ import { dateUtils } from "@/utils/dateUtils";
 import Head from "next/head";
 
 import styles from "./[id].module.scss";
+import { blogUtils } from "@/utils/blogUtils";
+
+interface BlogPosts {
+  total: number;
+  limit: number;
+  skip: number;
+
+  items: BlogPost[];
+}
 
 interface Props {
   post: BlogPost;
 }
 
-export const getServerSideProps = async (context: {
-  params: { id: string };
-}) => {
+export async function getStaticPaths() {
+  const client = contentful.createClient({
+    space: process.env.CONTENTFUL_SPACE as string,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,
+  });
+
+  const posts = (await client.getEntries()) as unknown as BlogPosts;
+
+  const paths = posts.items.map((post) => ({
+    params: {
+      id: blogUtils
+        .generateUrl(post.sys.id, post.fields.title)
+        .replace("/blog/", ""),
+    },
+  }));
+
+  return { paths, fallback: false };
+}
+
+export const getStaticProps = async (context: { params: { id: string } }) => {
   const client = contentful.createClient({
     space: process.env.CONTENTFUL_SPACE as string,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,
@@ -23,7 +49,7 @@ export const getServerSideProps = async (context: {
     context.params.id.split("-").pop() as string
   )) as unknown as BlogPost;
 
-  return { props: { post } };
+  return { props: { post }, revalidate: 120 };
 };
 
 const BlogPage: React.FC<Props> = (props: Props) => {
