@@ -5,7 +5,6 @@ import styles from "./blog.module.scss";
 import { dateUtils } from "@/utils/dateUtils";
 import BlogPost from "@/types/blogPost";
 import { blogUtils } from "@/utils/blogUtils";
-import { Redis } from "@upstash/redis";
 
 interface BlogPosts {
   total: number;
@@ -25,15 +24,7 @@ export const getServerSideProps = async () => {
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,
   });
 
-  const redis = Redis.fromEnv();
-  const cachedPosts = await redis.get<BlogPosts>("posts");
-
-  if (cachedPosts) {
-    return { props: { cachedPosts } };
-  }
-
   const posts = (await client.getEntries()) as unknown as BlogPosts;
-  await redis.set("posts", posts);
 
   return { props: { posts } };
 };
