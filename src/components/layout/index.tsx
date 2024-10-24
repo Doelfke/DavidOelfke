@@ -11,7 +11,7 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <div style={figree.style}>
+    <div className={figree.className}>
       <Analytics />
       <Navigation />
       {children}
