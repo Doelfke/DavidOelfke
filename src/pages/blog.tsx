@@ -40,7 +40,7 @@ const BlogPage: React.FC<Props> = (props: Props) => {
             <h2 className={styles.title}>
               <Link href={postLink}>{post.fields.title}</Link>
             </h2>
-            <div className={styles.date}>
+            <div className={styles.date} suppressHydrationWarning>
               {dateUtils.format(post.sys.createdAt)}
             </div>
             <div className={styles.subTitle}>{post.fields.subtitle}</div>

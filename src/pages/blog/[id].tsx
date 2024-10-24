@@ -37,7 +37,7 @@ const BlogPage: React.FC<Props> = (props: Props) => {
       <div className={styles.post}>
         <h2 className={styles.title}>{props.post.fields.title}</h2>
         <div className={styles.subTitle}>{props.post.fields.subtitle}</div>
-        <div className={styles.date}>
+        <div className={styles.date} suppressHydrationWarning>
           {dateUtils.format(props.post.sys.createdAt)}
         </div>
 
