@@ -5,9 +5,6 @@ import RootLayout from "../components/layout";
 import { PagesProgressBar } from "next-nprogress-bar";
 import "dotenv/config";
 
-import "./globals.css";
-import "@fontsource/figtree";
-
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
 };
