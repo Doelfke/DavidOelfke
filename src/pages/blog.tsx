@@ -5,6 +5,7 @@ import styles from "./blog.module.scss";
 import { dateUtils } from "@/utils/dateUtils";
 import BlogPost from "@/types/blogPost";
 import { blogUtils } from "@/utils/blogUtils";
+import { unstable_cache } from "next/cache";
 
 interface BlogPosts {
   total: number;
@@ -19,12 +20,29 @@ interface Props {
 }
 
 export const getServerSideProps = async () => {
-  const client = contentful.createClient({
-    space: process.env.CONTENTFUL_SPACE as string,
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,
-  });
+  const getAllData = unstable_cache(
+    async () => {
+      const client = contentful.createClient({
+        space: process.env.CONTENTFUL_SPACE as string,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,
+      });
 
-  const posts = (await client.getEntries()) as unknown as BlogPosts;
+      const posts = await client.getEntries({
+        content_type: "blogPost",
+        select: ["fields.title", "fields.subtitle", "sys.id", "sys.createdAt"],
+      });
+
+      return posts;
+    },
+    ["blogPosts"],
+    {
+      tags: ["blogPosts"],
+    }
+  );
+
+  console.time("fffff");
+  const posts = await getAllData();
+  console.timeEnd("fffff");
 
   return { props: { posts } };
 };
