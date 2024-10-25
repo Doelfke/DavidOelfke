@@ -10,7 +10,8 @@ export default async function handler(
     res.status(401).end();
     return;
   }
-  revalidateTag("blogPosts");
+
+  res.revalidate("/blog");
 
   res.status(200).end();
 }
