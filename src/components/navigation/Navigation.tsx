@@ -34,7 +34,7 @@ export default function Navigation() {
         <Link href="/my-work" className={styles.navigationItem}>
           My Work
         </Link>
-        <Link href="/blog" className={styles.navigationItem}>
+        <Link href="/blog/page/1" className={styles.navigationItem}>
           Blog
         </Link>
       </div>
