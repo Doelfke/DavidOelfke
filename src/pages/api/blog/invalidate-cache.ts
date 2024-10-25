@@ -11,7 +11,7 @@ export default async function handler(
     return;
   }
 
-  res.revalidate("/blog");
+  await res.revalidate("/blog");
 
   res.status(200).end();
 }
