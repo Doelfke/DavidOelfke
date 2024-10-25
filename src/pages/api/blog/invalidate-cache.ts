@@ -13,5 +13,5 @@ export default async function handler(
 
   await res.revalidate("/blog");
 
-  res.status(200).end();
+  return res.json({ revalidated: true });
 }
