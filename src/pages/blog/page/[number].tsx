@@ -42,7 +42,7 @@ export const getStaticProps = async (number: string) => {
     select: ["fields.title", "fields.subtitle", "sys.id", "sys.createdAt"],
   });
 
-  return { props: { posts } };
+  return { props: { posts }, revalidate: 120 };
 };
 
 const BlogPage: React.FC<Props> = (props: Props) => {
