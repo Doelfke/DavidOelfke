@@ -1,4 +1,5 @@
-import { Redis } from "@upstash/redis";
+import { revalidateTag } from "next/cache";
+
 import type { NextApiRequest, NextApiResponse } from "next";
 export default async function handler(
   req: NextApiRequest,
@@ -9,7 +10,7 @@ export default async function handler(
     res.status(401).end();
     return;
   }
-  const redis = Redis.fromEnv();
-  await redis.del("posts");
+  revalidateTag("blogPosts");
+
   res.status(200).end();
 }
