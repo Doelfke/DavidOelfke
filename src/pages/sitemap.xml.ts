@@ -24,6 +24,9 @@ function generateSiteMap(urls: string[]) {
          <loc>https://davidoelfke.dev/blog</loc>
        </url>
        <url>
+         <loc>https://davidoelfke.dev/blog/page/1</loc>
+       </url>
+       <url>
          <loc>https://davidoelfke.dev/my-work</loc>
        </url>
        ${urls

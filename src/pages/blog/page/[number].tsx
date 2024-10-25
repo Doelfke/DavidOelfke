@@ -1,7 +1,7 @@
 import { Page } from "@/components/page/Page";
 import * as contentful from "contentful";
 import Link from "next/link";
-import styles from "./blog.module.scss";
+import styles from "./[number].module.scss";
 import { dateUtils } from "@/utils/dateUtils";
 import BlogPost from "@/types/blogPost";
 import { blogUtils } from "@/utils/blogUtils";
@@ -18,7 +18,20 @@ interface Props {
   posts: BlogPosts;
 }
 
-export const getServerSideProps = async () => {
+export async function getStaticPaths(number: string) {
+  return {
+    paths: [
+      {
+        params: {
+          number: "1",
+        },
+      },
+    ],
+    fallback: false,
+  };
+}
+
+export const getStaticProps = async (number: string) => {
   const client = contentful.createClient({
     space: process.env.CONTENTFUL_SPACE as string,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,
