@@ -14,7 +14,6 @@
     "dotenv": "^16.4.5",
     "jsonfeed-to-rss": "^3.0.8",
     "next": "14.2.15",
-    "preact": "^10.24.3",
     "react": "^18",
     "react-dom": "^18",
     "react-type-animation": "^3.2.0",
