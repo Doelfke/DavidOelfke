@@ -2,7 +2,6 @@ import type { ReactElement, ReactNode } from "react";
 import type { NextPage } from "next";
 import type { AppProps } from "next/app";
 import RootLayout from "../components/layout";
-import "dotenv/config";
 
 import "./globals.css";
 

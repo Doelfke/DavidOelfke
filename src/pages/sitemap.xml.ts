@@ -2,6 +2,7 @@ import BlogPost from "@/types/blogPost";
 import { blogUtils } from "@/utils/blogUtils";
 import * as contentful from "contentful";
 import type { IncomingMessage, ServerResponse } from "http";
+import { loadEnvConfig } from "@next/env";
 
 interface BlogPosts {
   total: number;
@@ -46,6 +47,8 @@ function SiteMap() {}
 export async function getServerSideProps(r: {
   res: ServerResponse<IncomingMessage>;
 }) {
+  loadEnvConfig(process.cwd());
+
   const client = contentful.createClient({
     space: process.env.CONTENTFUL_SPACE as string,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,

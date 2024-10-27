@@ -5,6 +5,7 @@ import styles from "./[number].module.scss";
 import { dateUtils } from "@/utils/dateUtils";
 import BlogPost from "@/types/blogPost";
 import { blogUtils } from "@/utils/blogUtils";
+import { loadEnvConfig } from "@next/env";
 
 interface BlogPosts {
   total: number;
@@ -32,6 +33,8 @@ export async function getStaticPaths(number: string) {
 }
 
 export const getStaticProps = async (number: string) => {
+  loadEnvConfig(process.cwd());
+
   const client = contentful.createClient({
     space: process.env.CONTENTFUL_SPACE as string,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,

@@ -3,6 +3,7 @@ const jsonfeedToRSS = require("jsonfeed-to-rss");
 import * as contentful from "contentful";
 import BlogPost from "@/types/blogPost";
 import { blogUtils } from "@/utils/blogUtils";
+import { loadEnvConfig } from "@next/env";
 
 interface BlogPosts {
   total: number;
@@ -16,6 +17,8 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  loadEnvConfig(process.cwd());
+
   const client = contentful.createClient({
     space: process.env.CONTENTFUL_SPACE as string,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,

@@ -4,6 +4,7 @@ import BlogPost from "@/types/blogPost";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { dateUtils } from "@/utils/dateUtils";
 import Head from "next/head";
+import { loadEnvConfig } from "@next/env";
 
 import styles from "./[id].module.scss";
 import { blogUtils } from "@/utils/blogUtils";
@@ -21,6 +22,8 @@ interface Props {
 }
 
 export async function getStaticPaths() {
+  loadEnvConfig(process.cwd());
+
   const client = contentful.createClient({
     space: process.env.CONTENTFUL_SPACE as string,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,
@@ -40,6 +43,8 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps = async (context: { params: { id: string } }) => {
+  loadEnvConfig(process.cwd());
+
   const client = contentful.createClient({
     space: process.env.CONTENTFUL_SPACE as string,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,
