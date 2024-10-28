@@ -1,27 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import * as jsonfeedToRSS from 'jsonfeed-to-rss';
-import * as contentful from 'contentful';
-import BlogPost from '@/types/blogPost';
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const jsonfeedToRSS = require('jsonfeed-to-rss');
 import { blogUtils } from '@/utils/blogUtils';
-import { loadEnvConfig } from '@next/env';
-
-interface BlogPosts {
-  total: number;
-  limit: number;
-  skip: number;
-
-  items: BlogPost[];
-}
+import { contentfulService } from '@/services/contentful-service';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  loadEnvConfig(process.cwd());
-
-  const client = contentful.createClient({
-    space: process.env.CONTENTFUL_SPACE as string,
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string
-  });
-
-  const posts = (await client.getEntries()) as unknown as BlogPosts;
+  const posts = await contentfulService.getPosts();
 
   const data = {
     version: 'https://jsonfeed.org/version/1',

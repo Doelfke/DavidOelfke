@@ -1,37 +1,21 @@
 import { Page } from '@/components/page/Page';
-import * as contentful from 'contentful';
 import { MARKS } from '@contentful/rich-text-types';
 import BlogPost from '@/types/blogPost';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { dateUtils } from '@/utils/dateUtils';
 import Head from 'next/head';
-import { loadEnvConfig } from '@next/env';
 
 import styles from './[id].module.scss';
 import { blogUtils } from '@/utils/blogUtils';
 import { ReactNode } from 'react';
-
-interface BlogPosts {
-  total: number;
-  limit: number;
-  skip: number;
-
-  items: BlogPost[];
-}
+import { contentfulService } from '@/services/contentful-service';
 
 interface Props {
   post: BlogPost;
 }
 
 export async function getStaticPaths() {
-  loadEnvConfig(process.cwd());
-
-  const client = contentful.createClient({
-    space: process.env.CONTENTFUL_SPACE as string,
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string
-  });
-
-  const posts = (await client.getEntries()) as unknown as BlogPosts;
+  const posts = await contentfulService.getPosts();
 
   const paths = posts.items.map((post) => ({
     params: {
@@ -43,15 +27,9 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps = async (context: { params: { id: string } }) => {
-  loadEnvConfig(process.cwd());
-
-  const client = contentful.createClient({
-    space: process.env.CONTENTFUL_SPACE as string,
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string
-  });
-
   try {
-    const post = (await client.getEntry(context.params.id.split('-').pop() as string)) as unknown as BlogPost;
+    const id = context.params.id.split('-').pop() as string;
+    const post = await contentfulService.getPost(id);
 
     return { props: { post }, revalidate: 120 };
   } catch {

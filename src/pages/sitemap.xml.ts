@@ -1,16 +1,6 @@
-import BlogPost from '@/types/blogPost';
+import { contentfulService } from '@/services/contentful-service';
 import { blogUtils } from '@/utils/blogUtils';
-import * as contentful from 'contentful';
 import type { IncomingMessage, ServerResponse } from 'http';
-import { loadEnvConfig } from '@next/env';
-
-interface BlogPosts {
-  total: number;
-  limit: number;
-  skip: number;
-
-  items: BlogPost[];
-}
 
 function generateSiteMap(urls: string[]) {
   return `<?xml version="1.0" encoding="UTF-8"?>
@@ -35,8 +25,7 @@ function generateSiteMap(urls: string[]) {
            return `
          <url>
              <loc>${`${url}`}</loc>
-         </url>
-       `;
+         </url>`;
          })
          .join('')}
      </urlset>
@@ -45,16 +34,9 @@ function generateSiteMap(urls: string[]) {
 function SiteMap() {}
 
 export async function getServerSideProps(r: { res: ServerResponse<IncomingMessage> }) {
-  loadEnvConfig(process.cwd());
+  const posts = await contentfulService.getPosts();
 
-  const client = contentful.createClient({
-    space: process.env.CONTENTFUL_SPACE as string,
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string
-  });
-
-  const result = (await client.getEntries()) as unknown as BlogPosts;
-
-  const pages = result.items.map((post) => {
+  const pages = posts.items.map((post) => {
     return 'https://davidoelfke.dev' + blogUtils.generateUrl(post.sys.id, post.fields.title);
   });
 
