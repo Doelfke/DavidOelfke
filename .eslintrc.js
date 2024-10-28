@@ -23,7 +23,7 @@ module.exports = {
     'jsx-quotes': ['error', 'prefer-double'],
     'react/display-name': 'off',
     quotes: [1, 'single', { 'allowTemplateLiterals': true }],
-    semi: ['error', 'always'],
+    semi: [1, 'always'],
     'comma-dangle': ['error', 'never'],
     'indent': [1, 2],
     'no-throw-literal' : 'off'
