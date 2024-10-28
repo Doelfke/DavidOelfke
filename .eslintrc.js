@@ -13,18 +13,19 @@ module.exports = {
   },
   rules: {
     'react/react-in-jsx-scope': 'off',
+    'react/no-unescaped-entities': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
-    'max-len': ['error', { code: 180 }],
+    'max-len': [1, { code: 180 }],
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/no-empty-interface': 'off',
     '@typescript-eslint/no-inferrable-types': 'off',
     '@typescript-eslint/ban-ts-ignore': 'off',
     'jsx-quotes': ['error', 'prefer-double'],
     'react/display-name': 'off',
-    quotes: ['error', 'single', { 'allowTemplateLiterals': true }],
+    quotes: [1, 'single', { 'allowTemplateLiterals': true }],
     semi: ['error', 'always'],
     'comma-dangle': ['error', 'never'],
-    'indent': ['error', 2],
+    'indent': [1, 2],
     'no-throw-literal' : 'off'
   },
   settings: {

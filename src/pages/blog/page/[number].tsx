@@ -18,6 +18,7 @@ interface Props {
   posts: BlogPosts;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function getStaticPaths(number: string) {
   return {
     paths: [
@@ -31,6 +32,7 @@ export async function getStaticPaths(number: string) {
   };
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const getStaticProps = async (number: string) => {
   const posts = await contentfulService.getPosts();
 
