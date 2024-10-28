@@ -1,6 +1,6 @@
-import Head from "next/head";
-import { PageTitle } from "../page-title/PageTitle";
-import styles from "./Page.module.scss";
+import Head from 'next/head';
+import { PageTitle } from '../page-title/PageTitle';
+import styles from './Page.module.scss';
 
 interface Props extends React.PropsWithChildren {
   title: string;

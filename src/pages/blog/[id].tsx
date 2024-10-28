@@ -1,15 +1,15 @@
-import { Page } from "@/components/page/Page";
-import * as contentful from "contentful";
-import { MARKS } from "@contentful/rich-text-types";
-import BlogPost from "@/types/blogPost";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { dateUtils } from "@/utils/dateUtils";
-import Head from "next/head";
-import { loadEnvConfig } from "@next/env";
+import { Page } from '@/components/page/Page';
+import * as contentful from 'contentful';
+import { MARKS } from '@contentful/rich-text-types';
+import BlogPost from '@/types/blogPost';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { dateUtils } from '@/utils/dateUtils';
+import Head from 'next/head';
+import { loadEnvConfig } from '@next/env';
 
-import styles from "./[id].module.scss";
-import { blogUtils } from "@/utils/blogUtils";
-import { ReactNode } from "react";
+import styles from './[id].module.scss';
+import { blogUtils } from '@/utils/blogUtils';
+import { ReactNode } from 'react';
 
 interface BlogPosts {
   total: number;
@@ -28,20 +28,18 @@ export async function getStaticPaths() {
 
   const client = contentful.createClient({
     space: process.env.CONTENTFUL_SPACE as string,
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string
   });
 
   const posts = (await client.getEntries()) as unknown as BlogPosts;
 
   const paths = posts.items.map((post) => ({
     params: {
-      id: blogUtils
-        .generateUrl(post.sys.id, post.fields.title)
-        .replace("/blog/", ""),
-    },
+      id: blogUtils.generateUrl(post.sys.id, post.fields.title).replace('/blog/', '')
+    }
   }));
 
-  return { paths, fallback: "blocking" };
+  return { paths, fallback: 'blocking' };
 }
 
 export const getStaticProps = async (context: { params: { id: string } }) => {
@@ -49,18 +47,16 @@ export const getStaticProps = async (context: { params: { id: string } }) => {
 
   const client = contentful.createClient({
     space: process.env.CONTENTFUL_SPACE as string,
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string
   });
 
   try {
-    const post = (await client.getEntry(
-      context.params.id.split("-").pop() as string
-    )) as unknown as BlogPost;
+    const post = (await client.getEntry(context.params.id.split('-').pop() as string)) as unknown as BlogPost;
 
     return { props: { post }, revalidate: 120 };
   } catch {
     return {
-      notFound: true,
+      notFound: true
     };
   }
 };
@@ -70,19 +66,17 @@ const options = {
       return (
         <iframe
           height="300"
-          style={{ width: "100%" }}
+          style={{ width: '100%' }}
           scrolling="no"
           title="Loading Bar"
-          src={`https://codepen.io/doelfke/embed/${text
-            ?.toString()
-            .trim()}?default-tab=html%2Cresult`}
+          src={`https://codepen.io/doelfke/embed/${text?.toString().trim()}?default-tab=html%2Cresult`}
           frameBorder="no"
           loading="lazy"
           allowFullScreen={true}
         ></iframe>
       );
-    },
-  },
+    }
+  }
 };
 
 const BlogPage: React.FC<Props> = (props: Props) => {

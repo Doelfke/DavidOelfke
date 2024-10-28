@@ -1,4 +1,4 @@
-import { Document } from "@contentful/rich-text-types";
+import { Document } from '@contentful/rich-text-types';
 
 export default interface BlogPost {
   fields: {

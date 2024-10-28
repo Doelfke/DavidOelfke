@@ -1,7 +1,7 @@
-import { Page } from "@/components/page/Page";
-import { WORK_HISTORY } from "@/data/workHistory";
+import { Page } from '@/components/page/Page';
+import { WORK_HISTORY } from '@/data/workHistory';
 
-import styles from "./my-work.module.scss";
+import styles from './my-work.module.scss';
 
 export default function MyWorkPage() {
   return (
@@ -30,9 +30,7 @@ export default function MyWorkPage() {
                       <a href={`https://${domain}`} target="__blank">
                         {domain}
                       </a>
-                      {i !== job.domains.length - 1 && (
-                        <div className={styles.divider} />
-                      )}
+                      {i !== job.domains.length - 1 && <div className={styles.divider} />}
                     </div>
                   );
                 })}
@@ -46,9 +44,7 @@ export default function MyWorkPage() {
                       <a href={`/images/${image}`} target="__blank">
                         Image {i + 1}
                       </a>
-                      {i !== job.images.length - 1 && (
-                        <div className={styles.divider} />
-                      )}
+                      {i !== job.images.length - 1 && <div className={styles.divider} />}
                     </div>
                   );
                 })}

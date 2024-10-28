@@ -1,6 +1,6 @@
-import { useState } from "react";
-import styles from "./Navigation.module.scss";
-import Link from "next/link";
+import { useState } from 'react';
+import styles from './Navigation.module.scss';
+import Link from 'next/link';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,9 +8,7 @@ export default function Navigation() {
   return (
     <div className={styles.navigation}>
       <button
-        className={`${styles.hamburger} ${styles.hamburgerCollapse} ${
-          isOpen ? styles.isOpen : undefined
-        }`}
+        className={`${styles.hamburger} ${styles.hamburgerCollapse} ${isOpen ? styles.isOpen : undefined}`}
         type="button"
         aria-label="Toggle navigation menu"
         onClick={() => setIsOpen(!isOpen)}
@@ -19,12 +17,7 @@ export default function Navigation() {
           <span className={styles.hamburgerInner}></span>
         </span>
       </button>
-      <div
-        className={`${styles.navigationItems} ${
-          isOpen ? styles.navigationItemsOpen : ""
-        }`}
-        onClick={() => setIsOpen(false)}
-      >
+      <div className={`${styles.navigationItems} ${isOpen ? styles.navigationItemsOpen : ''}`} onClick={() => setIsOpen(false)}>
         <Link href="/" className={styles.navigationItem}>
           Home
         </Link>

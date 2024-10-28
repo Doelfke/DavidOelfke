@@ -1,11 +1,11 @@
-import { Page } from "@/components/page/Page";
-import * as contentful from "contentful";
-import Link from "next/link";
-import styles from "./[number].module.scss";
-import { dateUtils } from "@/utils/dateUtils";
-import BlogPost from "@/types/blogPost";
-import { blogUtils } from "@/utils/blogUtils";
-import { loadEnvConfig } from "@next/env";
+import { Page } from '@/components/page/Page';
+import * as contentful from 'contentful';
+import Link from 'next/link';
+import styles from './[number].module.scss';
+import { dateUtils } from '@/utils/dateUtils';
+import BlogPost from '@/types/blogPost';
+import { blogUtils } from '@/utils/blogUtils';
+import { loadEnvConfig } from '@next/env';
 
 interface BlogPosts {
   total: number;
@@ -24,11 +24,11 @@ export async function getStaticPaths(number: string) {
     paths: [
       {
         params: {
-          number: "1",
-        },
-      },
+          number: '1'
+        }
+      }
     ],
-    fallback: false,
+    fallback: false
   };
 }
 
@@ -37,12 +37,12 @@ export const getStaticProps = async (number: string) => {
 
   const client = contentful.createClient({
     space: process.env.CONTENTFUL_SPACE as string,
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string
   });
 
   const posts = await client.getEntries({
-    content_type: "blogPost",
-    select: ["fields.title", "fields.subtitle", "sys.id", "sys.createdAt"],
+    content_type: 'blogPost',
+    select: ['fields.title', 'fields.subtitle', 'sys.id', 'sys.createdAt']
   });
 
   return { props: { posts }, revalidate: 120 };

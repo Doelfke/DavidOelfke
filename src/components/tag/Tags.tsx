@@ -1,5 +1,5 @@
-import { Tag } from "./Tag";
-import styles from "./Tag.module.scss";
+import { Tag } from './Tag';
+import styles from './Tag.module.scss';
 
 interface Props {
   tags: string[];

@@ -1,8 +1,8 @@
-import BlogPost from "@/types/blogPost";
-import { blogUtils } from "@/utils/blogUtils";
-import * as contentful from "contentful";
-import type { IncomingMessage, ServerResponse } from "http";
-import { loadEnvConfig } from "@next/env";
+import BlogPost from '@/types/blogPost';
+import { blogUtils } from '@/utils/blogUtils';
+import * as contentful from 'contentful';
+import type { IncomingMessage, ServerResponse } from 'http';
+import { loadEnvConfig } from '@next/env';
 
 interface BlogPosts {
   total: number;
@@ -38,39 +38,34 @@ function generateSiteMap(urls: string[]) {
          </url>
        `;
          })
-         .join("")}
+         .join('')}
      </urlset>
    `;
 }
 function SiteMap() {}
 
-export async function getServerSideProps(r: {
-  res: ServerResponse<IncomingMessage>;
-}) {
+export async function getServerSideProps(r: { res: ServerResponse<IncomingMessage> }) {
   loadEnvConfig(process.cwd());
 
   const client = contentful.createClient({
     space: process.env.CONTENTFUL_SPACE as string,
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string
   });
 
   const result = (await client.getEntries()) as unknown as BlogPosts;
 
   const pages = result.items.map((post) => {
-    return (
-      "https://davidoelfke.dev" +
-      blogUtils.generateUrl(post.sys.id, post.fields.title)
-    );
+    return 'https://davidoelfke.dev' + blogUtils.generateUrl(post.sys.id, post.fields.title);
   });
 
   const sitemap = generateSiteMap(pages);
 
-  r.res.setHeader("Content-Type", "text/xml");
+  r.res.setHeader('Content-Type', 'text/xml');
   r.res.write(sitemap);
   r.res.end();
 
   return {
-    props: {},
+    props: {}
   };
 }
 
