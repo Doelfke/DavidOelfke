@@ -1,7 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodeHtmlToImage from 'node-html-to-image';
+import chromium from '@sparticuz/chromium';
+import puppeteer, { ChromeReleaseChannel } from 'puppeteer-core';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const chromePath = await chromium.executablePath();
+  chromium.setHeadlessMode = true;
+  puppeteer.executablePath(chromePath as ChromeReleaseChannel);
+
   const image = await nodeHtmlToImage({
     html: `<html>
               <head>
@@ -29,7 +35,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 <div class="footer">DavidOelfke.dev</div>
               </body>
            </html>`,
-    quality: 100
+    quality: 100,
+    puppeteer
   });
 
   res.writeHead(200, { 'Content-Type': 'image/png' });
