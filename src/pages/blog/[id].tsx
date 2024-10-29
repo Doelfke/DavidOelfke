@@ -66,6 +66,7 @@ const BlogPage: React.FC<Props> = (props: Props) => {
         <title>{pageTitle}</title>
         <meta property="og:title" content={props.post.fields.title} />
         <meta property="og:description" content={props.post.fields.subtitle} />
+        <meta property="og:image" content={`https://davidoelfke.dev/api/og-image?text=${props.post.fields.title}`} />
       </Head>
       <div className={styles.post}>
         <h2 className={styles.title}>{props.post.fields.title}</h2>
