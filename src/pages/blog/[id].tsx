@@ -54,6 +54,14 @@ const options = {
         ></iframe>
       );
     }
+  },
+  renderNode: {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    'embedded-asset-block': (node: any) => (
+      <div>
+        <img className="img-fluid" src={node.data.target.fields.file.url} width="100%" height="auto" />
+      </div>
+    )
   }
 };
 
