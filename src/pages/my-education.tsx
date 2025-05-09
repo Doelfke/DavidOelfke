@@ -18,8 +18,6 @@ export default function EducationPage() {
         CSC 1400 - Computer Info Systems
         <br />
         CSC 1500 - Computer Science I
-        <br />
-        CSC 1500 - Computer Science I
       </div>
 
       <div className={styles.sectionTitle}>Highschool</div>
