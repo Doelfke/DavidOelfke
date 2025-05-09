@@ -26,7 +26,7 @@ export default function AboutMePage() {
         "tuned up" PCs. I did this by creating a special CD that had all of the latest tools we needed and automating their installs and running them, with an easy UI. Matched up
         with a paper checklist we were able to automate a ton of our work and perform it much more quickly and consistently.
         <br />
-        <br />I stayed for a few years until joining EMC (now Dell) to manage multiple server server rooms. But it was there I switched over to being (mostly) a software engineer.
+        <br />I stayed for a few years until joining EMC (now Dell) to manage multiple server rooms. But it was there I switched over to being (mostly) a software engineer.
       </div>
 
       <div className={styles.sectionTitle}>School was weird.</div>

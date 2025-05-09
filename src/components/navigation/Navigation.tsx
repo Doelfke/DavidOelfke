@@ -27,6 +27,9 @@ export default function Navigation() {
         <Link href="/my-work" className={styles.navigationItem}>
           My Work
         </Link>
+        <Link href="/my-education" className={styles.navigationItem}>
+          My Education
+        </Link>
         <Link href="/blog/page/1" className={styles.navigationItem}>
           Blog
         </Link>
