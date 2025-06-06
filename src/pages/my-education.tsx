@@ -20,7 +20,7 @@ export default function EducationPage() {
         CSC 1500 - Computer Science I
       </div>
 
-      <div className={styles.sectionTitle}>Highschool</div>
+      <div className={styles.sectionTitle}>Leominster High School</div>
       <div className={styles.sectionBody}>
         C++
         <br />
