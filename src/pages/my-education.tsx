@@ -28,7 +28,7 @@ export default function EducationPage() {
         <br />
         A+ Certification
         <br />
-        CCNA Certification.
+        CCNA Certification
       </div>
     </Page>
   );
