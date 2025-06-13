@@ -32,5 +32,10 @@
     "eslint": "^9.28.0",
     "eslint-config-next": "^15.3.3",
     "typescript": "^5.8.3"
-  }
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "not dead"
+  ]
 }
