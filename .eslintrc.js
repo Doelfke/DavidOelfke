@@ -1,11 +1,8 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  extends: [
-    'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended'
-  ],
+  extends: ['plugin:react/recommended', 'plugin:@typescript-eslint/recommended'],
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 2023,
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true
@@ -22,11 +19,11 @@ module.exports = {
     '@typescript-eslint/ban-ts-ignore': 'off',
     'jsx-quotes': ['error', 'prefer-double'],
     'react/display-name': 'off',
-    quotes: [1, 'single', { 'allowTemplateLiterals': true }],
+    quotes: [1, 'single', { allowTemplateLiterals: true }],
     semi: [1, 'always'],
     'comma-dangle': ['error', 'never'],
-    'indent': [1, 2],
-    'no-throw-literal' : 'off'
+    indent: [1, 2],
+    'no-throw-literal': 'off'
   },
   settings: {
     react: {
@@ -34,4 +31,3 @@ module.exports = {
     }
   }
 };
-  
