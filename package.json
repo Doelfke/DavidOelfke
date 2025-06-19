@@ -28,11 +28,17 @@
     "sass": "^1.89.2"
   },
   "devDependencies": {
+    "@types/jest": "^30.0.0",
     "@types/node": "^24.0.1",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
+    "babel-jest": "^30.0.2",
     "eslint": "^9.28.0",
     "eslint-config-next": "^15.3.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^30.0.2",
+    "jest-environment-jsdom": "^30.0.2",
+    "ts-jest": "^29.4.0",
     "typescript": "^5.8.3"
   },
   "browserslist": [
