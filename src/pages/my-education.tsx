@@ -4,6 +4,9 @@ import styles from './about-me.module.scss';
 export default function EducationPage() {
   return (
     <Page title="My Education">
+      <div className={styles.sectionTitle}>Massachusetts Institute of Technology</div>
+      <div className={styles.sectionBody}>AI 101</div>
+
       <div className={styles.sectionTitle}>Harvard Business School</div>
       <div className={styles.sectionBody}>
         Resilient Leadership
