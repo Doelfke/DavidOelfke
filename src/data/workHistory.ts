@@ -15,6 +15,7 @@ const sayari = {
   endDate: 'Present',
   accomplishments: [
     'Rearchitected front end applications to make them more scalable and maintainable.',
+    'Created the company’s first AI offering.',
     'Migrated codebase to use a monorepo to introduce shared / typed api contracts.',
     'Led development on company’s second product offering (Map).',
     'Introduced a feature flag system to help move towards continuous deployment.',
@@ -62,7 +63,7 @@ const microsoft = {
 
 const rocket = {
   companyName: 'Rocket Insights',
-  position: 'Hands on Director of Engineering',
+  position: 'Principal Software Engineer',
   startDate: 'Nov 2017',
   endDate: 'May 2021',
   accomplishments: [
@@ -77,7 +78,7 @@ const rocket = {
 
 const buildium = {
   companyName: 'Buildium',
-  position: 'Hands on Director of Engineering',
+  position: 'Senior Software Engineering Manager',
   startDate: 'Dec 2013',
   endDate: 'Nov 2017',
   accomplishments: [
