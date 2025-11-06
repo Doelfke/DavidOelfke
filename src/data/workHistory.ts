@@ -8,22 +8,35 @@ interface Work {
   images: string[];
 }
 
+const qloo = {
+  companyName: 'Qloo',
+  position: 'Leader Software Engineer',
+  startDate: 'Jan 2025',
+  endDate: 'Present',
+  accomplishments: [
+    'Led development of version 2 — the world’s first Taste AI platform.',
+    'Built an onshore engineering team and modernized best practices.',
+    'Developed secure dashboard sharing, multi-user editing, and in-app help systems.',
+    'Migrated codebase from JavaScript to TypeScript.',
+    'Resolved major architectural bottlenecks and introduced metrics tooling for continuous engineering improvement.'
+  ],
+  images: [],
+  domains: ['Qloo.com']
+};
+
 const sayari = {
   companyName: 'Sayari',
   position: 'Principal Software Engineer',
   startDate: 'Feb 2024',
-  endDate: 'Present',
+  endDate: 'Jan 2025',
   accomplishments: [
-    'Rearchitected front end applications to make them more scalable and maintainable.',
-    'Created the company’s first AI offering.',
-    'Migrated codebase to use a monorepo to introduce shared / typed api contracts.',
-    'Led development on company’s second product offering (Map).',
-    'Introduced a feature flag system to help move towards continuous deployment.',
-    'Revamped engineering practices: proper Typescript typings, more timely code reviews, better util patterns to make code more discoverable, pushed to move to SCSS modules, Slack alerts to notify failed builds, enforced new components work off of a variation pattern rather than being infinitely customizable to reduce development time, etc.',
-    'Introduced a new schema validator (Zod) and created a new custom form system.',
-    'Introduced pods to make teams both scalable and autonomous.',
-    'Built better tooling to support faster development: auto-recovering kubernetes port forwarding and storybook to custom theme CSS Chrome extension.',
-    'Created front end practice meeting to keep devs in sync about changes / vote on changes.'
+    'Rearchitected frontend apps for better scalability and maintainability.',
+    'Developed the company’s first AI product to summarize large datasets, speeding analyst workflows.',
+    'Built an AI-driven data pipeline to boost consolidation accuracy.',
+    'Led development of the company’s second major product (Map) and migrated codebase to a shared monorepo.',
+    'Implemented a feature flag system and modernized engineering practices (TypeScript, SCSS modules, Slack build alerts, CI).',
+    'Introduced a pod-based team structure for faster, autonomous delivery.',
+    'Created internal tools (auto-recovering Kubernetes forwarding, Storybook, custom Chrome extension) and led frontend practice initiatives.'
   ],
   images: ['Sayari1.png', 'Sayari2.png', 'Sayari3.png', 'Sayari4.png', 'Sayari5.png', 'Sayari6.png', 'Sayari7.png'],
   domains: ['Sayari.com']
@@ -150,4 +163,4 @@ const cdu = {
   domains: []
 };
 
-export const WORK_HISTORY: Work[] = [sayari, freelance, microsoft, rocket, buildium, rls, tsd, emc, cdu];
+export const WORK_HISTORY: Work[] = [qloo, sayari, freelance, microsoft, rocket, buildium, rls, tsd, emc, cdu];

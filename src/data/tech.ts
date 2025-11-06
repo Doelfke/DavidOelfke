@@ -1,5 +1,6 @@
 export const TECH = [
   '.NET',
+  'AI',
   'Ant Design (AntD)',
   'AWS',
   'Akamai',
@@ -89,6 +90,7 @@ export const TECH = [
   'Powershell',
   'Prisma',
   'Pug',
+  'Python',
   'REST',
   'React',
   'React Hook Form',
