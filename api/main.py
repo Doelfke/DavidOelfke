@@ -22,7 +22,7 @@ ALLOWED_DOMAIN = os.getenv("ALLOWED_DOMAIN", "https://davidoelfke.dev")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[ALLOWED_DOMAIN],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
