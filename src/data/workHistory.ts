@@ -10,7 +10,7 @@ interface Work {
 
 const qloo = {
   companyName: 'Qloo',
-  position: 'Leader Software Engineer',
+  position: 'Lead Software Engineer',
   startDate: 'Jan 2025',
   endDate: 'Present',
   accomplishments: [

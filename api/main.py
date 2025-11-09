@@ -1,5 +1,6 @@
 import os
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from dotenv import load_dotenv
 from langchain.agents import create_agent
@@ -16,7 +17,16 @@ app = FastAPI(
 )
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "default_value")
+ALLOWED_DOMAIN = os.getenv("ALLOWED_DOMAIN", "https://davidoelfke.dev")
 
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[ALLOWED_DOMAIN],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 def get_david_oelfke_info() -> dict:
     """Get information about David Oelfke."""

@@ -1,0 +1,81 @@
+.container {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container input {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+}
+
+.container input:disabled {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+}
+
+.container button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #9333ea;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.container button:hover:not(:disabled) {
+    background-color: #7e22ce;
+}
+
+.container button:disabled {
+    background-color: #d4d4d4;
+    cursor: not-allowed;
+}
+
+.answerContainer {
+    overflow-y: scroll;
+}
+
+.answer {
+    margin-top: 32px;
+    margin-right: 48px;
+    padding: 16px;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.answerLabel {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #1f2937;
+}
+
+.answerText {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #374151;
+    white-space: pre-wrap;
+}
+
+.inputContainer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 24px;
+    background-color: #fff;
+    border-top: 1px solid #e5e7eb;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}

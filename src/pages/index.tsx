@@ -33,16 +33,16 @@ export default function Home() {
         </div>
         <div className={styles.subTitle}>from San Diego, California.</div>
         <div className={styles.tagLine}>I've worked for 2 person startups, tech giants, and everything in between, specializing in all things web.</div>
-        <div className={styles.techStack}>My favorite tech stack is:</div>
+        <div className={styles.techStack}>This site was made with:</div>
         <ul className={styles.techStackList}>
           <li>TypeScript</li>
           <li>React</li>
           <li>A Custom UI</li>
-          <li>Node.js</li>
-          <li>NestJS</li>
-          <li>TypeORM</li>
-          <li>Postgres</li>
-          <li>Heroku</li>
+          <li>SCSS Modules</li>
+          <li>Python</li>
+          <li>LangChain</li>
+          <li>OpenAI</li>
+          <li>Vercel</li>
         </ul>
         <Link href="/about-me#technologies">But I've worked with many more.</Link>
       </div>

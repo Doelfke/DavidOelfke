@@ -33,6 +33,9 @@ export default function Navigation() {
         <Link href="/blog/page/1" className={styles.navigationItem}>
           Blog
         </Link>
+        <Link href="/chat" className={styles.navigationItem}>
+          Oelfke AI
+        </Link>
       </div>
     </div>
   );
