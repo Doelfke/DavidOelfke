@@ -1,56 +1,40 @@
-# DavidOelfke API
+# FastHTML Boilerplate
 
-FastAPI backend for the DavidOelfke portfolio website.
+Deploy your [FastAPI](https://fastapi.tiangolo.com/) project to Vercel with zero configuration.
 
-## Requirements
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/fastapi&template=fastapi)
 
-- Python 3.11+
-- pip or uv for package management
+_Live Example: https://ai-sdk-preview-python-streaming.vercel.app/_
 
-## Setup
+Visit the [FastAPI documentation](https://fastapi.tiangolo.com/) to learn more.
 
-1. Create a virtual environment:
-```bash
-cd api
-python -m venv venv
-source venv/bin/activate  # On macOS/Linux
-```
+## Getting Started
 
-2. Install dependencies:
+Install the required dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Copy environment variables:
+## Running Locally
+
+Start the development server on http://0.0.0.0:5001
+
 ```bash
-cp .env.example .env
+uvicorn main:app --reload --port 5001
 ```
 
-4. Run the development server:
+When you make changes to your project, the server will automatically reload.
+
+## Deploying to Vercel
+
+Deploy your project to Vercel with the following command:
+
 ```bash
-uvicorn main:app --reload --host 0.0.0.0 --port 8000
+npm install -g vercel
+vercel --prod
 ```
 
-The API will be available at:
-- Main API: http://localhost:8000
-- Interactive docs: http://localhost:8000/docs
-- ReDoc: http://localhost:8000/redoc
+Or `git push` to your repostory with our [git integration](https://vercel.com/docs/deployments/git).
 
-
-## Development
-
-### Run with hot reload:
-```bash
-uvicorn main:app --reload
-```
-
-### Type checking:
-```bash
-mypy api/
-```
-
-### Lint:
-```bash
-flake8 .
-```
-
+To view the source code for this template, [visit the example repository](https://github.com/vercel/vercel/tree/main/examples/fastapi).
