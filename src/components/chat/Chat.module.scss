@@ -1,3 +1,5 @@
+@import "../../styles/breakpoints.scss";
+
 .container {
     padding: 24px;
     display: flex;
@@ -50,6 +52,9 @@
 .answer {
     margin-top: 32px;
     margin-right: 48px;
+    @include md {
+        margin-right: 4px;
+    }
     padding: 16px;
     background-color: #f9fafb;
     border-radius: 8px;
