@@ -32,3 +32,7 @@ async def root() -> Dict[str, str]:
         "docs": "/docs",
         "health": "/api/health"
     }
+
+
+# Vercel serverless function handler
+app_handler = app
