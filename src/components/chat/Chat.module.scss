@@ -2,6 +2,8 @@
     padding: 24px;
     display: flex;
     flex-direction: column;
+    height: 100%;
+    min-height: 70vh;
 }
 
 .container input {
@@ -40,7 +42,9 @@
 }
 
 .answerContainer {
-    overflow-y: scroll;
+    overflow-y: auto;
+    flex: 1;
+    margin-bottom: 24px;
 }
 
 .answer {
@@ -67,15 +71,12 @@
 }
 
 .inputContainer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 24px;
     background-color: #fff;
     border-top: 1px solid #e5e7eb;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
     display: flex;
     gap: 8px;
     align-items: center;
+    margin-top: auto;
+    flex-shrink: 0;
 }
