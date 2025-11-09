@@ -44,7 +44,7 @@ export default function Home() {
           <li>OpenAI</li>
           <li>Vercel</li>
         </ul>
-        <Link href="/about-me#technologies">But I've worked with many more.</Link>
+        <Link href="/about-me#technologies">But I've worked with many more technologies.</Link>
       </div>
 
       <div className={styles.seeMyWork}>

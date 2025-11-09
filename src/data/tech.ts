@@ -54,6 +54,7 @@ export const TECH = [
   'jQuery',
   'Knockout',
   'Kubernetes',
+  'LangChain',
   'LDAP',
   'LESS',
   'Lambdas',

@@ -56,6 +56,7 @@ TECHNOLOGIES = [
     "jQuery",
     "Knockout",
     "Kubernetes",
+    "LandChain",
     "LDAP",
     "LESS",
     "Lambdas",
