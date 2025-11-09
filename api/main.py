@@ -1,5 +1,6 @@
 import os
 from fastapi import FastAPI
+from fastapi.responses import StreamingResponse
 from dotenv import load_dotenv
 from langchain.agents import create_agent
 from langchain_openai import ChatOpenAI
@@ -34,32 +35,43 @@ def read_root():
 
 @app.get("/ask/{question}")
 def ask(question: str):
-    """Ask a question about David Oelfke."""
-    model = ChatOpenAI(
-        model="gpt-5-mini",
-        api_key=OPENAI_API_KEY,
-    )
+    """Ask a question about David Oelfke with streaming response."""
+    
+    async def generate():
+        try:
+            model = ChatOpenAI(
+                model="gpt-4.1-mini",
+                api_key=OPENAI_API_KEY,
+                streaming=True,
+            )
 
-    system_prompt = (
-        "Answer the user's questions using the provided tools. "
-        "Do not use the word 'listed' in your answers. "
-        "Only answer things about David Oelfke and his work experience. "
-        "If the user asks about anything else, respond with "
-        "'I can only answer questions about David Oelfke and his work experience.'"
-    )
+            system_prompt = (
+                "Answer the user's questions using the provided tools. "
+                "Do not use the word 'listed' in your answers. "
+                "Only answer things about David Oelfke and his work experience. "
+                "If the user asks about anything else, respond with "
+                "'I can only answer questions about David Oelfke and his work experience.'"
+            )
 
-    agent = create_agent(
-        model,
-        tools=[get_david_oelfke_info],
-        system_prompt=system_prompt,
-    )
+            agent = create_agent(
+                model,
+                tools=[get_david_oelfke_info],
+                system_prompt=system_prompt,
+            )
 
-    response = agent.invoke({"messages": [{"role": "user", "content": question}]})
+            async for event in agent.astream_events(
+                {"messages": [{"role": "user", "content": question}]},
+                version="v2"
+            ):
+                kind = event["event"]
+                if kind == "on_chat_model_stream":
+                    content = event["data"]["chunk"].content
+                    if content:
+                        yield content
+            
+            # Send a final event to signal completion
+            yield ""
+        except Exception as e:
+            yield f"data: Error: {str(e)}\n\n"
 
-    final_message = (
-        response["messages"][-1].content
-        if "messages" in response and response["messages"]
-        else str(response)
-    )
-
-    return {"message": final_message}
+    return StreamingResponse(generate(), media_type="text/event-stream")
