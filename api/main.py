@@ -1,10 +1,21 @@
+"""
+Main FastAPI application entry point.
+"""
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from typing import Dict
+import os
 
-from routers import health
-from config import settings
+# Import routers and config
+try:
+    from routers import health
+    from config import settings
+except ImportError:
+    # Fallback for Vercel deployment
+    from api.routers import health
+    from api.config import settings
 
+# Create FastAPI app instance
 app = FastAPI(
     title=settings.APP_NAME,
     description="FastAPI backend for DavidOelfke portfolio",
@@ -13,6 +24,7 @@ app = FastAPI(
     redoc_url="/redoc",
 )
 
+# Configure CORS
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.allowed_origins_list,
@@ -21,6 +33,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Include routers
 app.include_router(health.router, prefix="/api", tags=["health"])
 
 
@@ -35,4 +48,4 @@ async def root() -> Dict[str, str]:
 
 
 # Vercel serverless function handler
-app_handler = app
+handler = app
