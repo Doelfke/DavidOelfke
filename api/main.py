@@ -20,6 +20,14 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "default_value")
 ALLOWED_DOMAIN = os.getenv("ALLOWED_DOMAIN")
 
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 def get_david_oelfke_info() -> dict:
     """Get information about David Oelfke."""
@@ -78,12 +86,3 @@ def ask(question: str):
             yield f"data: Error: {str(e)}\n\n"
 
     return StreamingResponse(generate(), media_type="text/event-stream")
-
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=[ALLOWED_DOMAIN],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
