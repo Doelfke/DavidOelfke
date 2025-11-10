@@ -12,7 +12,8 @@ qloo = {
         "Migrated codebase from JavaScript to TypeScript.",
         "Resolved major architectural bottlenecks and introduced metrics tooling for continuous engineering improvement."
     ],
-    "domains": ["Qloo.com"]
+    "domains": ["Qloo.com"],
+    "programming languages and technologies": ['AI', 'CSS', 'Day.js','ESLint','Express.js','FastAPI', 'Git','GitHub', 'HTML','JavaScript','Jest','LangChain','Lambdas', 'Material UI (MUI)','Monorepo','Next.js','Node.js','Open AI','PNPM','Python', 'React', 'React Query','REST','Styled Components','TypeScript','Vercel', 'Webpack']
 }
 
 sayari = {
@@ -29,7 +30,8 @@ sayari = {
         "Introduced a pod-based team structure for faster, autonomous delivery.",
         "Created internal tools (auto-recovering Kubernetes forwarding, Storybook, custom Chrome extension) and led frontend practice initiatives."
     ],
-    "domains": ["Sayari.com"]
+    "domains": ["Sayari.com"],
+    "programming languages and technologies": ['AI','CSS','CloudWatch', 'Day.js', 'Elasticsearch', 'ESLint','Emotion', 'Express.js','GCP','Git', 'GitHub', 'HTML','JavaScript', 'Jest', 'Kubernetes', 'Material UI (MUI)','MixPanel', 'Monorepo','Node.js', 'Open AI', 'PNPM','Postgres','Python', 'REST', 'React Hook Form', 'React Query', 'Redis','Redux', 'RxJS', 'SCSS', 'Styled Components', 'TypeScript', 'Vite','Zod']
 }
 
 freelance = {
@@ -44,7 +46,8 @@ freelance = {
         "Trayd - same day payroll for construction workers.",
         "Upwell - invoicing automation for trucking / logistics."
     ],
-    "domains": ["OnbrandPLM.com", "BuildTrayd.com", "SibbleAssociates.com", "Upwell.com"]
+    "domains": ["OnbrandPLM.com", "BuildTrayd.com", "SibbleAssociates.com", "Upwell.com"],
+    "programming languages and technologies": ['AI','Auth0','CSS','Cloudflare','Docker', 'ESLint','Emotion', 'Express.js','Firebase','Fly.io','GCP','Git','GitHub', 'HTML','JavaScript', 'Jest', 'Lambdas', 'Mantine','Material UI (MUI)', 'Monorepo', 'Netlify', 'Next.js', 'Node.js','NPM','Open AI','PNPM','Postgres','Prisma','REST', 'React', 'React Hook Form','React Query','Remix','S3','SCSS','SendGrid','Supabase','Tailwind', 'tRPC','Turborepo', 'TypeScript', 'Vercel','Zod']
 }
 
 microsoft = {
@@ -59,7 +62,8 @@ microsoft = {
         "Restructured all teams to be full-stack within the organization.",
         "Evaluated new hardware for developers in the organization."
     ],
-    "domains": ["Portal.Azure.com"]
+    "domains": ["Portal.Azure.com"],
+    "programming languages and technologies": ['.NET', 'Azure', 'Azure AD', 'C#', 'CSS', 'ESLint','Git','GraphQL', 'HTML', 'JavaScript','Jest', 'Knockout','LDAP','Linq','Monorepo','MSBuild','MSGraph','NPM', 'React', 'Styled Components', 'TypeScript']
 }
 
 rocket = {
@@ -73,7 +77,8 @@ rocket = {
         "Expanded the company to the west coast.",
         "Created a framework that's used at multiple clients and helped many of them build or scale their engineering practices."
     ],
-    "domains": ["RocketInsights.com", "DeptAgency.com"]
+    "domains": ["RocketInsights.com", "DeptAgency.com"],
+    "programming languages and technologies": ['Ant Design (AntD)', 'AWS', 'Amplitude', 'Apollo', 'Auth0', 'Brightcove', 'CSS','Class Validator','CloudFront','Cognito','Contentful','Cordova','Dataloader','Docker','ESLint','Emotion','Express.js', 'Git', 'Github','Google Analytics','GraphQL', 'HTML','Heroku','JavaScript','Jest','Lambdas','Launch Darkly','Lerna','Material UI (MUI)','Moment','Monorepo','Nest.js','Netlify','Next.js','Node.js','NPM', 'Nuxt','Postgres','REST', 'React','Redis','S3','SCSS','SendGrid','SES','Slack', 'Styled Components','TypeORM','TypeScript', 'Vercel', 'Vue', 'Webpack','Yarn','Yup']
 }
 
 buildium = {
@@ -90,7 +95,8 @@ buildium = {
         "Built out the devops team and practices.",
         "Led the organization for most security bounties."
     ],
-    "domains": ["Buildium.com"]
+    "domains": ["Buildium.com"],
+    "programming languages and technologies": ['.NET', 'AWS','Akamai', 'Angular', 'Bitbucket', 'C#', 'CSS', 'Elasticsearch','Git', 'HTML','JavaScript', 'jQuery', 'Knockout', 'LESS', 'Lambdas', 'Linq','Lodash','Lucene','Mailgun','Moment', 'MySQL','New Relic','Powershell', 'REST','S3','SendGrid','SES', 'SQS', 'Underscore','WebAPI']
 }
 
 rls = {
@@ -103,7 +109,8 @@ rls = {
         "Migrated servers to a scalable architecture with full redundancy and high availability.",
         "Modernized IT and development practices."
     ],
-    "domains": ["TryElevate.com"]
+    "domains": ["TryElevate.com"],
+    "programming languages and technologies": ['.NET', 'Azure', 'C#','CSS', 'HTML', 'JavaScript', 'jQuery','Linq', 'Lodash','Node.js','NPM','Underscore', 'WordPress']
 }
 
 tsd = {
@@ -120,7 +127,8 @@ tsd = {
         "Improved engineering practices and company culture.",
         "Oversaw public website development."
     ],
-    "domains": ["TSDWeb.com"]
+    "domains": ["TSDWeb.com"],
+    "programming languages and technologies": ['.NET', 'CSS', 'HTML','JavaScript', 'jQuery','Linq', 'MySQL', 'WebAPI']
 }
 
 emc = {
@@ -129,7 +137,8 @@ emc = {
     "startDate": "Jan 2007",
     "endDate": "Nov 2010",
     "accomplishments": ["Ownership, development, and administration of various 1st and 3rd party webs apps and tools."],
-    "domains": ["Dell.com"]
+    "domains": ["Dell.com"],
+    "programming languages and technologies": ['.NET', 'CSS','Entity Framework','HTML', 'JavaScript','LDAP','Linq','MySQL','Oracle DB', 'PHP']
 }
 
 cdu = {
