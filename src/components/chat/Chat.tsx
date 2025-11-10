@@ -59,7 +59,6 @@ export const Chat = () => {
       <div className={styles.answerContainer}>
         {answer && (
           <div className={styles.answer}>
-            <div className={styles.answerLabel}>Answer:</div>
             <div className={styles.answerText}>{answer}</div>
           </div>
         )}
