@@ -17,7 +17,7 @@ export const Chat = () => {
     try {
       let response: Response;
 
-      if (process.env.IS_PRODUCTION) {
+      if (process.env.NEXT_PUBLIC_IS_PRODUCTION) {
         response = await fetch(`https://david-oelfke-7972.vercel.app/ask/${encodeURIComponent(question)}`, { mode: 'cors' });
       } else {
         response = await fetch(`http://localhost/ask/${encodeURIComponent(question)}`, { mode: 'cors' });
