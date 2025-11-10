@@ -15,8 +15,13 @@ export const Chat = () => {
     setAnswer('');
 
     try {
-      //const response = await fetch(`http://localhost/ask/${encodeURIComponent(question)}`, { mode: 'cors' });
-      const response = await fetch(`https://david-oelfke-7972.vercel.app/ask/${encodeURIComponent(question)}`, { mode: 'cors' });
+      let response: Response;
+
+      if (process.env.IS_PRODUCTION) {
+        response = await fetch(`https://david-oelfke-7972.vercel.app/ask/${encodeURIComponent(question)}`, { mode: 'cors' });
+      } else {
+        response = await fetch(`http://localhost/ask/${encodeURIComponent(question)}`, { mode: 'cors' });
+      }
 
       const reader = response.body?.getReader();
       const decoder = new TextDecoder();

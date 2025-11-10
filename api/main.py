@@ -75,7 +75,7 @@ def ask(question: str):
             system_prompt = (
                 "Answer the user's questions using the provided tools. "
                 "Do not use the word 'listed' in your answers. "
-                "Only answer things about David Oelfke and his work experience. "
+                "Only answer things about David Oelfke and his work experience and contact information. "
                 "If the user asks about anything else, respond with "
                 "'I can only answer questions about David Oelfke and his work experience.'"
             )
