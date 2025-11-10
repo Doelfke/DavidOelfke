@@ -37,7 +37,7 @@ export default function Home() {
         <ul className={styles.techStackList}>
           <li>TypeScript</li>
           <li>React</li>
-          <li>A Custom UI</li>
+          <li>Next.js</li>
           <li>SCSS Modules</li>
           <li>Python</li>
           <li>LangChain</li>
