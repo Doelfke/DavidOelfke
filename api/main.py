@@ -7,6 +7,8 @@ from langchain.agents import create_agent
 from langchain_openai import ChatOpenAI
 from technologies import TECHNOLOGIES
 from work_history import WORK_HISTORY
+from education import EDUCATION
+
 
 load_dotenv()
 
@@ -34,24 +36,19 @@ def get_david_oelfke_info() -> dict:
     return {
         "name": "David Oelfke",
         "city": "San Diego",
+        "state": "California",
+        "country": "USA",
         "programming languages and technologies": TECHNOLOGIES,
         "work experience": WORK_HISTORY,
         "contact": {
             "LinkedIn": "https//www.linkedin.com/in/davidoelfke",      
         },
-        "education": [
-            {"school" :"Massachusetts Institute of Technology", "program": "AI 101"},
-            {"school" :"Harvard Business School", "program": "Resilient Leadership"},
-            {"school" :"Harvard Business School", "program": "Exercising Leadership: Foundational Principles"},
-            {"school" :"Fitchburg State University", "program": "CSC 1000 - Intro to Programming"},
-            {"school" :"Fitchburg State University", "program": "CSC 1400 - Computer Info Systems"},
-            {"school" :"Fitchburg State University", "program": "CSC 1500 - Computer Science I"},
-            {"school" :"Leominster High School", "program": "C++"},
-            {"school" :"Leominster High School", "program": "Visual Basic"},
-            {"school" :"Leominster High School", "program": "A+ Certification"},
-            {"school" :"Leominster High School", "program": "CCNA Certification"},
-
-        ]
+        "links": {
+            "GitHub": "https://github.com/doelfke",
+            "Website": "https://davidoelfke.com",
+            "Blog": "https://davidoelfke.com/blog",
+        },
+        "education": EDUCATION
     }
 
 @app.get("/")
