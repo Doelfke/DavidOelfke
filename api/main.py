@@ -18,16 +18,15 @@ app = FastAPI(
     version="1.0.0",
 )
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "default_value")
-ALLOWED_DOMAIN = os.getenv("ALLOWED_DOMAIN")
 
+ALLOWED_DOMAIN = os.getenv("ALLOWED_DOMAIN")
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[ALLOWED_DOMAIN],
     allow_credentials=True,
     allow_methods=["*"],
-    allow_headers=["*"]
+    allow_headers=["*"],
 )
 
 
@@ -41,15 +40,16 @@ def get_david_oelfke_info() -> dict:
         "programming languages and technologies": TECHNOLOGIES,
         "work experience": WORK_HISTORY,
         "contact": {
-            "LinkedIn": "https//www.linkedin.com/in/davidoelfke",      
+            "LinkedIn": "https//www.linkedin.com/in/davidoelfke",
         },
         "links": {
             "GitHub": "https://github.com/doelfke",
             "Website": "https://davidoelfke.com",
             "Blog": "https://davidoelfke.com/blog",
         },
-        "education": EDUCATION
+        "education": EDUCATION,
     }
+
 
 @app.get("/")
 def read_root():
@@ -60,8 +60,10 @@ def read_root():
 @app.get("/ask/{question}")
 def ask(question: str):
     """Ask a question about David Oelfke with streaming response."""
-    
+
     async def generate():
+        OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "default_value")
+
         try:
             model = ChatOpenAI(
                 model="gpt-4.1-mini",
@@ -85,15 +87,14 @@ def ask(question: str):
             )
 
             async for event in agent.astream_events(
-                {"messages": [{"role": "user", "content": question}]},
-                version="v2"
+                {"messages": [{"role": "user", "content": question}]}, version="v2"
             ):
                 kind = event["event"]
                 if kind == "on_chat_model_stream":
                     content = event["data"]["chunk"].content
                     if content:
                         yield content
-            
+
             # Send a final event to signal completion
             yield ""
         except Exception as e:

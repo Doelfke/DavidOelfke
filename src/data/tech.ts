@@ -34,6 +34,7 @@ export const TECH = [
   'Emotion',
   'Entity Framework',
   'Express.js',
+  'FastAPI',
   'Firebase',
   'Fly.io',
   'GCP',

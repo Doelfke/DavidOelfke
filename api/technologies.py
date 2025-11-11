@@ -127,5 +127,5 @@ TECHNOLOGIES = [
     "WordPress",
     "Yarn",
     "Yup",
-    "Zod"
+    "Zod",
 ]
