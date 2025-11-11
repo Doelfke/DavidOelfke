@@ -1,4 +1,5 @@
 import os
+from urllib.parse import unquote
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
@@ -60,6 +61,8 @@ def read_root():
 @app.get("/ask/{question}")
 def ask(question: str):
     """Ask a question about David Oelfke with streaming response."""
+
+    question = unquote(question)
 
     async def generate():
         OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "default_value")
