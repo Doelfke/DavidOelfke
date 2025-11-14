@@ -5,7 +5,7 @@ import styles from './Chat.module.scss';
 
 export const Chat = () => {
   const [question, setQuestion] = React.useState('');
-  const [answer, setAnswer] = React.useState('');
+  const [answer, setAnswer] = React.useState("Hi! I'm here to help answer any questions you have about David Oelfke. What would you like to know?");
   const [isLoading, setIsLoading] = React.useState(false);
 
   const handleAsk = async () => {
