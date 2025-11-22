@@ -79,6 +79,7 @@ def ask(question: str):
                 "Do not use the word 'listed' in your answers. "
                 "Only answer things about David Oelfke and his work experience and contact information. "
                 "Do not offer additional help or information. "
+                "If there is no matching skills, programming languages, experience, etc, tell them about similar experience."
                 "If the user asks about anything else, respond with "
                 "'I can only answer questions about David Oelfke and his work experience.'"
             )
