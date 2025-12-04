@@ -7,6 +7,7 @@ qloo = {
     "endDate": "Present",
     "accomplishments": [
         "Led development of version 2 — the world's first Taste AI platform.",
+        "Created an AI prediction system for matching users based on their interests utilizing MCP.",
         "Built an onshore engineering team and modernized best practices.",
         "Developed secure dashboard sharing, multi-user editing, and in-app help systems.",
         "Migrated codebase from JavaScript to TypeScript.",
@@ -54,7 +55,7 @@ sayari = {
     "endDate": "Jan 2025",
     "accomplishments": [
         "Rearchitected frontend apps for better scalability and maintainability.",
-        "Developed the company's first AI product to summarize large datasets, speeding analyst workflows.",
+        "Developed the company’s first AI product to summarize large datasets, speeding analyst workflows using Pinecone / RAG.",
         "Built an AI-driven data pipeline to boost consolidation accuracy.",
         "Led development of the company's second major product (Map) and migrated codebase to a shared monorepo.",
         "Implemented a feature flag system and modernized engineering practices (TypeScript, SCSS modules, Slack build alerts, CI).",

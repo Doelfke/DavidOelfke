@@ -15,6 +15,7 @@ const qloo = {
   endDate: 'Present',
   accomplishments: [
     'Led development of version 2 — the world’s first Taste AI platform.',
+    'Created an AI prediction system for matching users based on their interests utilizing MCP.',
     'Built an onshore engineering team and modernized best practices.',
     'Developed secure dashboard sharing, multi-user editing, and in-app help systems.',
     'Migrated codebase from JavaScript to TypeScript.',
