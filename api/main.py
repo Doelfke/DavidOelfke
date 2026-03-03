@@ -35,9 +35,7 @@ def get_david_oelfke_info() -> dict:
     """Get information about David Oelfke."""
     return {
         "name": "David Oelfke",
-        "city": "San Diego",
-        "state": "California",
-        "country": "USA",
+        "country": "United States",
         "programming languages and technologies": TECHNOLOGIES,
         "work experience": WORK_HISTORY,
         "contact": {

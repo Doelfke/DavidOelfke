@@ -31,7 +31,6 @@ export default function Home() {
             speed={50}
           />
         </div>
-        <div className={styles.subTitle}>from San Diego, California.</div>
         <div className={styles.tagLine}>I've worked for 2 person startups, tech giants, and everything in between, specializing in all things web.</div>
         <div className={styles.techStack}>This site was made with:</div>
         <ul className={styles.techStackList}>

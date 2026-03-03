@@ -36,15 +36,6 @@
     }
 }
 
-.subTitle {
-    margin-top: 2px;
-    font-size: 18px;
-
-    @include md {
-        margin-top: 8px;
-        font-size: 36px;
-    }
-}
 
 .tagLine {
     margin-top: 16px;
