@@ -18,13 +18,13 @@ export default function Home() {
           <TypeAnimation
             preRenderFirstString
             sequence={[
-              250,
+              500,
               "I'm David Oelfke and I'm a software engineering",
-              250,
+              500,
               "I'm David Oelfke and I'm a software engineering author",
-              250,
+              500,
               "I'm David Oelfke and I'm a software engineering leader",
-              250,
+              500,
               "I'm David Oelfke and I'm a software engineer"
             ]}
             speed={50}
