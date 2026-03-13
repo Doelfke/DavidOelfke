@@ -3,15 +3,15 @@
 .page {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 64px 8px 8px 8px;
+    padding: 8px 8px 8px 8px;
 
     @include md {
-        padding: 64px 16px 16px;
+        padding: 48px 16px 16px;
     }
     @include lg {
-        padding: 64px 16px 16px;
+        padding: 48px 16px 16px;
     }
     @include xl {
-        padding: 64px 96px 24px;
+        padding: 48px 96px 24px;
     }
 }
