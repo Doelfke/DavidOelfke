@@ -1,14 +1,25 @@
+html {
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Figtree";
-  color: rgb(55, 65, 81)
+  color: rgb(55, 65, 81);
+  background-color: #fafafa;
 }
 
 a {
-  font-weight: 800;
-  color: #9333ea;
+  font-weight: 700;
+  color: #2563eb;
   text-decoration: none;
+  transition: color 0.15s ease;
 }
 
 a:hover {
+  color: #1d4ed8;
   text-decoration: underline;
 }

@@ -1,5 +1,6 @@
 import { Page } from '@/components/page/Page';
 import Link from 'next/link';
+import { Card } from '@/components/card/Card';
 import styles from './[number].module.scss';
 import { dateUtils } from '@/utils/dateUtils';
 import BlogPost from '@/types/blogPost';
@@ -46,7 +47,7 @@ const BlogPage: React.FC<Props> = (props: Props) => {
         const postLink = blogUtils.generateUrl(post.sys.id, post.fields.title);
 
         return (
-          <div key={post.sys.id} className={styles.post}>
+          <Card key={post.sys.id} className={styles.post}>
             <h2 className={styles.title}>
               <Link href={postLink}>{post.fields.title}</Link>
             </h2>
@@ -57,7 +58,7 @@ const BlogPage: React.FC<Props> = (props: Props) => {
             <div className={styles.readIt}>
               <Link href={postLink}>Read it &rarr;</Link>
             </div>
-          </div>
+          </Card>
         );
       })}
     </Page>

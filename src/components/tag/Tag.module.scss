@@ -1,13 +1,23 @@
 .tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px 4px;
+    gap: 8px;
 }
 
 .tag {
     display: inline-block;
-    padding: 4px;
+    padding: 2px 12px;
+    border-radius: 20px;
+    font-size: 14px;
 
     color: #374151;
-    background-color: #e5e7eb;
+    background-color: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+
+    &:hover {
+        background-color: #dbeafe;
+        border-color: #93c5fd;
+        color: #1e40af;
+    }
 }

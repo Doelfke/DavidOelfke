@@ -1,6 +1,7 @@
 'use client';
 
 import { TypeAnimation } from 'react-type-animation';
+import { Card } from '@/components/card/Card';
 
 import styles from './index.module.scss';
 import Link from 'next/link';
@@ -18,22 +19,22 @@ export default function Home() {
             preRenderFirstString
             sequence={[
               250,
-              "I'm David Oelfke and I'm a",
+              "I'm David Oelfke and I'm a software engineering",
               250,
-              "I'm David Oelfke and I'm a web developer",
+              "I'm David Oelfke and I'm a software engineering author",
               250,
-              "I'm David Oelfke and I'm an engineering author",
-              250,
-              "I'm David Oelfke and I'm an engineering leader",
+              "I'm David Oelfke and I'm a software engineering leader",
               250,
               "I'm David Oelfke and I'm a software engineer"
             ]}
             speed={50}
           />
         </div>
-        <div className={styles.tagLine}>I've worked for 2 person startups, tech giants, and everything in between, specializing in all things web.</div>
+        <div className={styles.tagLine}>
+          I&apos;ve built products at two-person startups, tech giants, and everything in between, specializing in modern web and AI experiences.
+        </div>
         <div className={styles.techStack}>This site was made with:</div>
-        <ul className={styles.techStackList}>
+        <Card as="ul" className={styles.techStackList}>
           <li>TypeScript</li>
           <li>React</li>
           <li>Next.js</li>
@@ -42,8 +43,10 @@ export default function Home() {
           <li>LangChain</li>
           <li>OpenAI</li>
           <li>Vercel</li>
-        </ul>
-        <Link href="/about-me#technologies">But I've worked with many more technologies.</Link>
+        </Card>
+        <div className={styles.moreTech}>
+          <Link href="/about-me#technologies">But I&apos;ve worked with many more technologies</Link>
+        </div>
       </div>
 
       <div className={styles.seeMyWork}>

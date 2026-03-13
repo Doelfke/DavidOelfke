@@ -1,22 +1,19 @@
 @import "../styles/breakpoints.scss";
 
 .container {
-    padding-bottom: 32px;
-    line-height: 24px;
+    padding: 24px;
+    margin-bottom: 16px;
+    line-height: 26px;
 
     li {
-        margin-bottom: 16px;
+        margin-bottom: 12px;
     }
-}
-
-.container + .container {
-    padding-top: 32px;
-    border-top: 1px solid #d4d4d4;
 }
 
 .titleContainer {
     font-size: 18px;
     font-weight: 600;
+    margin-bottom: 8px;
 
     @include md {
         display: flex;
@@ -24,9 +21,25 @@
     }
 }
 
+.companyName {
+    color: #2563eb;
+    font-weight: 700;
+}
+
+.position {
+    font-weight: 400;
+    color: #4b5563;
+}
+
+.separator {
+    color: #d1d5db;
+    margin: 0 4px;
+}
+
 .date {
     font-size: 16px;
     font-weight: 400;
+    color: #6b7280;
 
     @include md {
         font-size: 14px;
@@ -38,6 +51,7 @@
     margin-top: 16px;
     display: flex;
     flex-wrap: wrap;
+    gap: 8px 0;
 }
 
 .domains {
@@ -52,7 +66,7 @@
 
 .divider {
     display: inline-block;
-    border-left: 1px solid #9e9c9c;
+    border-left: 1px solid #b7b6b6;
     height: 10px;
     width: 2px;
     margin: 0 8px;

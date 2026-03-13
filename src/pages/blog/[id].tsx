@@ -1,4 +1,5 @@
 import { Page } from '@/components/page/Page';
+import { Card } from '@/components/card/Card';
 import { MARKS } from '@contentful/rich-text-types';
 import BlogPost from '@/types/blogPost';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
@@ -76,7 +77,7 @@ const BlogPage: React.FC<Props> = (props: Props) => {
         <meta property="og:description" content={props.post.fields.subtitle} />
         <meta property="og:image" content={`https://davidoelfke.dev/api/og-image?text=${props.post.fields.title}`} />
       </Head>
-      <div className={styles.post}>
+      <Card className={styles.post}>
         <h2 className={styles.title}>{props.post.fields.title}</h2>
         <div className={styles.subTitle}>{props.post.fields.subtitle}</div>
         <div className={styles.date} suppressHydrationWarning>
@@ -84,7 +85,7 @@ const BlogPage: React.FC<Props> = (props: Props) => {
         </div>
 
         {documentToReactComponents(props.post.fields.body, options)}
-      </div>
+      </Card>
     </Page>
   );
 };

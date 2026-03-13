@@ -1,4 +1,5 @@
 import { Page } from '@/components/page/Page';
+import { Card } from '@/components/card/Card';
 import { WORK_HISTORY } from '@/data/workHistory';
 
 import styles from './my-work.module.scss';
@@ -8,10 +9,12 @@ export default function MyWorkPage() {
     <Page title="My Work">
       {WORK_HISTORY.map((job) => {
         return (
-          <div className={styles.container} key={job.companyName}>
+          <Card className={styles.container} key={job.companyName}>
             <div className={styles.titleContainer}>
               <div>
-                {job.companyName} - {job.position}
+                <span className={styles.companyName}>{job.companyName}</span>
+                <span className={styles.separator}>·</span>
+                <span className={styles.position}>{job.position}</span>
               </div>
               <div className={styles.date}>
                 {job.startDate} - {job.endDate}
@@ -50,7 +53,7 @@ export default function MyWorkPage() {
                 })}
               </div>
             )}
-          </div>
+          </Card>
         );
       })}
     </Page>
