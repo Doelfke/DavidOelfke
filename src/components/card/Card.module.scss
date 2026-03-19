@@ -1,19 +1,20 @@
 .card {
-    position: relative;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.55);
-    border-left: 4px solid rgba(37, 99, 235, 0.7);
-    background: rgba(255, 255, 255, 0.55);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    box-shadow: 0 4px 24px rgba(17, 24, 39, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.8);
-    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background 0.18s ease;
-}
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.75rem 2rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
 
-.card:hover,
-.card:focus-within {
-    transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.68);
-    border-color: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 8px 32px rgba(37, 99, 235, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  &:hover {
+    border-color: rgba(56, 189, 248, 0.22);
+    box-shadow: 0 4px 40px rgba(56, 189, 248, 0.06);
+  }
+
+  // When used as a list element
+  &:is(ul) {
+    list-style: none;
+    padding: 0;
+  }
 }

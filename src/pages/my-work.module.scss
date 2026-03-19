@@ -1,73 +1,79 @@
-@import "../styles/breakpoints.scss";
+@import '@/styles/breakpoints';
 
 .container {
-    padding: 24px;
-    margin-bottom: 16px;
-    line-height: 26px;
-
-    li {
-        margin-bottom: 12px;
-    }
+  // spacing handled by Page gap
 }
 
 .titleContainer {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 1rem;
 
-    @include md {
-        display: flex;
-        justify-content: space-between;
-    }
+  @include md {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
 }
 
 .companyName {
-    color: #2563eb;
-    font-weight: 700;
-}
-
-.position {
-    font-weight: 400;
-    color: #4b5563;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  letter-spacing: -0.01em;
 }
 
 .separator {
-    color: #d1d5db;
-    margin: 0 4px;
+  color: #334155;
+  margin: 0 0.5rem;
+}
+
+.position {
+  font-size: 0.925rem;
+  color: #38bdf8;
+  font-weight: 500;
 }
 
 .date {
-    font-size: 16px;
-    font-weight: 400;
-    color: #6b7280;
+  font-size: 0.8rem;
+  color: #475569;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
 
-    @include md {
-        font-size: 14px;
+.domains,
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.domain,
+.imageLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  a {
+    font-size: 0.835rem;
+    color: #64748b;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #38bdf8;
     }
-}
-
-
-.images, .domains {
-    margin-top: 16px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 0;
-}
-
-.domains {
-    margin-top: 24px;
-}
-
-.domain, .imageLink {
-    @include md {
-        display: inline-block;
-    }
+  }
 }
 
 .divider {
-    display: inline-block;
-    border-left: 1px solid #b7b6b6;
-    height: 10px;
-    width: 2px;
-    margin: 0 8px;
+  width: 1px;
+  height: 13px;
+  background: rgba(255, 255, 255, 0.12);
 }

@@ -1,188 +1,112 @@
-@import "../styles/breakpoints.scss";
+@import '@/styles/breakpoints';
 
 .page {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 8px;
-    padding-top: 64px;
-
-    @include md {
-        padding: 16px;
-    }
-    @include lg {
-        padding: 16px;
-    }
-    @include xl {
-        padding: 24px 96px;
-    }
+  min-height: calc(100svh - 5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
 }
 
 .title {
-    span {
-        display: inline-block;
-    }
-
-    font-size: 32px;
-    font-weight: 800;
-    color: #1f2937;
-    letter-spacing: -1px;
-    line-height: 1.15;
-
-    @include md {
-        font-size: 62px;
-        letter-spacing: -2px;
-    }
-    @include lg {
-        font-size: 80px;
-        letter-spacing: -3px;
-    }
-    @include xl {
-        font-size: 90px;
-        letter-spacing: -4px;
-    }
+  font-size: clamp(1.65rem, 4.5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+  background: linear-gradient(135deg, #e2e8f0 30%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  min-height: 3.5rem;
+  margin-bottom: 1.5rem;
 }
 
-
 .tagLine {
-    margin-top: 20px;
-    font-size: 15px;
-    font-style: italic;
-    color: #6b7280;
-    line-height: 1.6;
-    max-width: 600px;
-
-    @include md {
-        margin-top: 16px;
-        font-size: 18px;
-    }
+  font-size: 1.05rem;
+  color: #94a3b8;
+  max-width: 580px;
+  line-height: 1.75;
+  margin-bottom: 2.5rem;
 }
 
 .techStack {
-    margin-top: 80px;
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #9ca3af;
-
-    @include md {
-        margin-top: 64px;
-    }
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #475569;
+  margin-bottom: 0.65rem;
+  font-weight: 600;
 }
 
 .techStackList {
-    margin: 8px 0;
-    padding: 16px 12px;
-    columns: 2;
-    padding-inline-start: 38px;
-    font-size: 16px;
-    line-height: 32px;
+  display: flex !important;
+  flex-wrap: wrap;
+  margin-bottom: 0;
 
-    color: #374151;
+  li {
+    padding: 0.6rem 1.1rem;
+    padding-left: 1.1rem;
+    color: #94a3b8;
+    font-size: 0.875rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.07);
+    position: static;
 
-    @include md {
-        columns: 4;
-        padding: 24px 16px;
-        line-height: 38px;
-        padding-inline-start: 42px;
+    &::before {
+      content: none;
     }
+
+    &:last-child {
+      border-right: none;
+    }
+  }
 }
 
 .moreTech {
-    margin-top: 24px;
+  margin-top: 1rem;
 
-    a {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        font-size: 14px;
-        font-weight: 500;
-        color: #6b7280;
-        text-decoration: none;
-        transition: color 0.15s ease;
+  a {
+    color: #64748b;
+    font-size: 0.875rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: color 0.2s ease;
 
-        &::after {
-            content: "\2192";
-            transition: transform 0.15s ease;
-        }
-
-        &:hover {
-            color: #1f2937;
-
-            &::after {
-                transform: translateX(3px);
-            }
-        }
-
-        &:focus-visible {
-            outline: 2px solid #93c5fd;
-            outline-offset: 2px;
-            border-radius: 2px;
-        }
+    &::after {
+      content: '→';
+      transition: transform 0.2s ease;
     }
+
+    &:hover {
+      color: #38bdf8;
+
+      &::after {
+        transform: translateX(3px);
+      }
+    }
+  }
 }
 
 .seeMyWork {
-    display: none;
-    position: fixed;
-    z-index: -1;
-    bottom: 16px;
-    width: 100%;
-    font-size: 20px;
-    text-align: center;
+  margin-top: 3rem;
 
-    @media (min-width: #{$screen-md-min}) and (min-height: 750px) {
-        display: block;
-        bottom: 24px;
-        font-size: 24px;
-    }
-    animation: bounce 5s infinite alternate;
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 2rem;
+    background: linear-gradient(135deg, #38bdf8, #818cf8);
+    color: #0a0e1a;
+    font-weight: 700;
+    font-size: 0.925rem;
+    border-radius: 100px;
+    letter-spacing: 0.01em;
+    transition: opacity 0.2s ease, transform 0.2s ease;
 
-    a {
-        display: inline-block;
-        padding: 10px 28px;
-        border-radius: 6px;
-        background: #ffffff;
-        color: #1f2937;
-        font-weight: 600;
-        font-size: 15px;
-        text-decoration: none;
-        letter-spacing: 0.01em;
-        border: 1.5px solid #d1d5db;
-        transition: background 0.15s ease, border-color 0.15s ease;
-
-        @include md {
-            font-size: 17px;
-            padding: 12px 36px;
-        }
-
-        &:hover {
-            background: #f3f4f6;
-            border-color: #9ca3af;
-            text-decoration: none;
-        }
-
-        &:focus-visible {
-            outline: 2px solid #93c5fd;
-            outline-offset: 2px;
-        }
+    &:hover {
+      opacity: 0.88;
+      transform: translateY(-2px);
     }
-}
-
-@keyframes bounce {
-    0% {
-        transform: translateY(0);
-    }
-    94% {
-        transform: translateY(0);
-    }
-    96% {
-        transform: translateY(-10px);
-    }
-    98% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-10px);
-    }
+  }
 }

@@ -1,23 +1,25 @@
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+.tag {
+  display: inline-block;
+  padding: 0.28rem 0.75rem;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: 100px;
+  color: #38bdf8;
+  font-size: 0.775rem;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  white-space: nowrap;
+  transition: background 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    background: rgba(56, 189, 248, 0.18);
+    border-color: rgba(56, 189, 248, 0.4);
+  }
 }
 
-.tag {
-    display: inline-block;
-    padding: 2px 12px;
-    border-radius: 20px;
-    font-size: 14px;
-
-    color: #374151;
-    background-color: #f3f4f6;
-    border: 1px solid #e5e7eb;
-    transition: background-color 0.15s ease, border-color 0.15s ease;
-
-    &:hover {
-        background-color: #dbeafe;
-        border-color: #93c5fd;
-        color: #1e40af;
-    }
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
 }

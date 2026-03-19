@@ -1,25 +1,74 @@
+:root {
+  --bg-primary: #0a0e1a;
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --text-muted: #475569;
+  --accent-primary: #38bdf8;
+  --accent-secondary: #818cf8;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
 body {
-  font-family: "Figtree";
-  color: rgb(55, 65, 81);
-  background-color: #fafafa;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100svh;
 }
 
 a {
-  font-weight: 700;
-  color: #2563eb;
+  color: var(--accent-primary);
   text-decoration: none;
-  transition: color 0.15s ease;
+  transition: color 0.2s ease;
 }
 
 a:hover {
-  color: #1d4ed8;
-  text-decoration: underline;
+  color: var(--accent-secondary);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  color: var(--text-secondary);
+  font-size: 0.925rem;
+  line-height: 1.75;
+  padding-left: 1rem;
+  position: relative;
+}
+
+li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+}
+
+input,
+textarea {
+  font-family: inherit;
 }

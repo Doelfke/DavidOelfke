@@ -1,23 +1,17 @@
 .container {
-    padding: 24px;
-    margin-bottom: 16px;
+  // spacing handled by Page gap
 }
 
 .sectionTitle {
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 20px;
-    font-weight: 700;
-    color: #1f2937;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
 }
 
 .sectionBody {
-    margin: 0;
-    line-height: 28px;
-    color: #374151;
-
-    a {
-        color: #1d4ed8;
-        font-weight: 600;
-    }
+  color: #94a3b8;
+  line-height: 1.85;
+  font-size: 0.95rem;
 }

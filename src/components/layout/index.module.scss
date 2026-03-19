@@ -1,10 +1,11 @@
+@import '@/styles/breakpoints';
+
 .bgAnimation {
   position: fixed;
   inset: 0;
-  z-index: 0;
   overflow: hidden;
   pointer-events: none;
-  opacity: 0.7;
+  z-index: 0;
 }
 
 .blob1,
@@ -14,78 +15,66 @@
   position: absolute;
   border-radius: 50%;
   filter: blur(100px);
-  will-change: transform;
+  opacity: 0.12;
+  animation: blobFloat 20s ease-in-out infinite alternate;
 }
 
 .blob1 {
-  width: 680px;
-  height: 680px;
-  background: radial-gradient(circle, rgba(0, 120, 255, 0.25), rgba(0, 90, 230, 0.06) 70%);
-  top: -200px;
-  right: -100px;
-  animation: float1 8s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+  width: 700px;
+  height: 700px;
+  background: #38bdf8;
+  top: -300px;
+  left: -200px;
+  animation-duration: 26s;
 }
 
 .blob2 {
-  width: 580px;
-  height: 580px;
-  background: radial-gradient(circle, rgba(56, 160, 255, 0.22), rgba(0, 120, 240, 0.05) 70%);
-  bottom: -150px;
-  left: -130px;
-  animation: float2 10s ease-in-out infinite;
-  animation-delay: -4s;
+  width: 550px;
+  height: 550px;
+  background: #818cf8;
+  top: 35%;
+  right: -150px;
+  animation-duration: 21s;
+  animation-delay: -7s;
 }
 
 .blob3 {
-  width: 420px;
-  height: 420px;
-  background: radial-gradient(circle, rgba(14, 180, 245, 0.20), rgba(0, 150, 210, 0.05) 70%);
-  top: 42%;
-  left: 28%;
-  animation: float3 7s ease-in-out infinite;
-  animation-delay: -2s;
+  width: 450px;
+  height: 450px;
+  background: #06b6d4;
+  bottom: -100px;
+  left: 25%;
+  animation-duration: 32s;
+  animation-delay: -12s;
 }
 
 .blob4 {
-  width: 520px;
-  height: 520px;
-  background: radial-gradient(circle, rgba(80, 180, 255, 0.22), rgba(56, 150, 240, 0.05) 70%);
-  bottom: 10%;
-  right: -100px;
-  animation: float4 12s cubic-bezier(0.37, 0, 0.63, 1) infinite;
-  animation-delay: -6s;
+  width: 380px;
+  height: 380px;
+  background: #6366f1;
+  top: 18%;
+  left: 42%;
+  animation-duration: 24s;
+  animation-delay: -18s;
 }
 
-@keyframes float1 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  20%       { transform: translate(-200px, 220px) scale(1.10); }
-  40%       { transform: translate(-320px, 80px) scale(0.92); }
-  60%       { transform: translate(-180px, 300px) scale(1.15); }
-  80%       { transform: translate(120px, 140px) scale(0.96); }
-}
-
-@keyframes float2 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  25%      { transform: translate(260px, -180px) scale(1.12); }
-  50%      { transform: translate(160px, -320px) scale(0.86); }
-  75%      { transform: translate(300px, -140px) scale(1.08); }
-}
-
-@keyframes float3 {
-  0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); }
-  33%      { transform: translate(220px, -240px) scale(1.18) rotate(10deg); }
-  66%      { transform: translate(-200px, 200px) scale(0.84) rotate(-8deg); }
-}
-
-@keyframes float4 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  15%      { transform: translate(-260px, -200px) scale(1.12); }
-  35%      { transform: translate(-160px, 240px) scale(0.90); }
-  55%      { transform: translate(-340px, 80px) scale(1.11); }
-  75%      { transform: translate(-200px, -280px) scale(0.88); }
+@keyframes blobFloat {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(50px, 35px) scale(1.1);
+  }
 }
 
 .content {
   position: relative;
   z-index: 1;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 5rem;
+
+  @include md {
+    padding: 2.5rem 2rem 6rem;
+  }
 }
