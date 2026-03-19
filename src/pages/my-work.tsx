@@ -13,7 +13,8 @@ export default function MyWorkPage() {
             <div className={styles.titleContainer}>
               <div>
                 <span className={styles.companyName}>{job.companyName}</span>
-                <span className={styles.separator}>·</span>
+              </div>
+              <div>
                 <span className={styles.position}>{job.position}</span>
               </div>
               <div className={styles.date}>
