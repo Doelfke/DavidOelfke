@@ -14,6 +14,12 @@ export default function Navigation() {
 
   return (
     <div className={styles.navigation}>
+      {pathname !== '/' && (
+        <Link href="/" className={styles.siteTitle}>
+          DavidOelfke.dev
+        </Link>
+      )}
+      {pathname === '/' && <div></div>}
       <button
         className={`${styles.hamburger} ${styles.hamburgerCollapse} ${isOpen ? styles.isOpen : undefined}`}
         type="button"

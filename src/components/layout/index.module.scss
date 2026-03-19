@@ -26,6 +26,13 @@
   top: 0;
   left: -200px;
   animation-duration: 26s;
+
+  @media (max-width: 767px) {
+    width: 300px;
+    height: 300px;
+    top: 60px;
+    left: -50px;
+  }
 }
 
 .blob2 {
@@ -36,6 +43,12 @@
   right: 0;
   animation-duration: 21s;
   animation-delay: -7s;
+
+  @media (max-width: 767px) {
+    width: 260px;
+    height: 260px;
+    right: -30px;
+  }
 }
 
 .blob3 {
@@ -46,6 +59,13 @@
   left: 25%;
   animation-duration: 32s;
   animation-delay: -12s;
+
+  @media (max-width: 767px) {
+    width: 240px;
+    height: 240px;
+    bottom: 80px;
+    left: 10%;
+  }
 }
 
 .blob4 {
@@ -56,6 +76,11 @@
   left: 42%;
   animation-duration: 24s;
   animation-delay: -18s;
+
+  @media (max-width: 767px) {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 @keyframes blobFloat {
@@ -64,6 +89,17 @@
   }
   to {
     transform: translate(50px, 35px) scale(1.1);
+  }
+}
+
+@media (max-width: 767px) {
+  @keyframes blobFloat {
+    from {
+      transform: translate(0, 0) scale(1);
+    }
+    to {
+      transform: translate(15px, 15px) scale(1.05);
+    }
   }
 }
 
