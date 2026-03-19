@@ -9,7 +9,7 @@ export default function Layout({ children }: Readonly<{ children: React.ReactNod
   return (
     <div className={figree.className}>
       <Head>
-        <meta name="theme-color" content="#f0f5ff" />
+        <meta name="theme-color" content="#0a0e1a" />
       </Head>
       <div className={styles.bgAnimation} aria-hidden="true">
         <span className={styles.blob1} />
