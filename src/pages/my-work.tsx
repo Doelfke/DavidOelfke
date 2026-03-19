@@ -21,7 +21,7 @@ export default function MyWorkPage() {
                 {job.startDate} - {job.endDate}
               </div>
             </div>
-            <ul>
+            <ul className={styles.accomplishments}>
               {job.accomplishments.map((accomplishment, i) => {
                 return <li key={i}>{accomplishment}</li>;
               })}

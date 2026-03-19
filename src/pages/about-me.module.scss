@@ -14,4 +14,29 @@
   color: #94a3b8;
   line-height: 1.85;
   font-size: 0.95rem;
+
+  p + p {
+    margin-top: 1.8rem;
+  }
+}
+
+.courseList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  li {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    padding: 0.4rem 0.75rem;
+    transition: border-color 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      border-left-color: #64748b;
+      color: #cbd5e1;
+    }
+  }
 }

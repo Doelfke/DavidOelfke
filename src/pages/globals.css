@@ -29,6 +29,32 @@ body {
   min-height: 100svh;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+li,
+label {
+  transition: color 0.2s ease, filter 0.2s ease;
+}
+
+p:hover,
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover,
+span:hover,
+li:hover,
+label:hover {
+  filter: brightness(1.3);
+}
+
 a {
   color: var(--accent-primary);
   text-decoration: none;
