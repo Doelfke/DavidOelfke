@@ -5,6 +5,7 @@
   inset: 0;
   overflow: hidden;
   clip-path: inset(0);
+  contain: paint;
   pointer-events: none;
   z-index: 0;
 }
