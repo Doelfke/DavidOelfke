@@ -1,9 +1,31 @@
+@keyframes pageEnter {
+  0% {
+    scale: 1.4;
+    transform: translateX(.2em);
+    opacity: 0;
+    filter: blur(20px) brightness(1.4);
+  }
+  30% {
+         scale: 1;
+
+    opacity: 1;
+  }
+  70% {
+    filter: blur(2px) brightness(1.05);
+  }
+  100% {
+    opacity: 1;
+    filter: none;
+  }
+}
+
 .pageTitle {
   font-size: clamp(1.85rem, 4vw, 2.75rem);
   font-weight: 700;
+  animation: pageEnter 0.3s linear forwards;
   letter-spacing: -0.035em;
   line-height: 1.15;
-  background: linear-gradient(135deg, #e2e8f0 20%, #38bdf8 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #38bdf8 50%, #818cf8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
