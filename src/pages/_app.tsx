@@ -1,6 +1,7 @@
 import type { ReactElement, ReactNode } from 'react';
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
+import { useRouter } from 'next/router';
 import RootLayout from '../components/layout';
 
 import './globals.css';
@@ -14,7 +15,8 @@ type AppPropsWithLayout = AppProps & {
 };
 
 export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+  const router = useRouter();
   const getLayout = Component.getLayout || ((page) => <RootLayout>{page}</RootLayout>);
 
-  return getLayout(<Component {...pageProps} />);
+  return getLayout(<Component key={router.asPath} {...pageProps} />);
 }
