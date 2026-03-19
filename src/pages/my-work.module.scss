@@ -30,6 +30,27 @@
   margin: 0 0.5rem;
 }
 
+.namePosition {
+  display: inline;
+}
+
+.mobileBreak {
+  display: block;
+
+  @include md {
+    display: none;
+  }
+}
+
+.positionSeparator {
+  display: none;
+
+  @include md {
+    display: inline;
+    color: #334155;
+  }
+}
+
 .position {
   font-size: 0.925rem;
   color: #38bdf8;

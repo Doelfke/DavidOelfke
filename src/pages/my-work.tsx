@@ -11,10 +11,10 @@ export default function MyWorkPage() {
         return (
           <Card className={styles.container} key={job.companyName}>
             <div className={styles.titleContainer}>
-              <div>
+              <div className={styles.namePosition}>
                 <span className={styles.companyName}>{job.companyName}</span>
-              </div>
-              <div>
+                <br className={styles.mobileBreak} />
+                <span className={styles.positionSeparator}> — </span>
                 <span className={styles.position}>{job.position}</span>
               </div>
               <div className={styles.date}>
