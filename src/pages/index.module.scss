@@ -113,7 +113,11 @@
 
 .seeMyWork {
   margin-top: auto;
-  padding-bottom: 1rem;
+  padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
+
+  @include md {
+    padding-bottom: 1rem;
+  }
 
   a {
     display: inline-flex;
